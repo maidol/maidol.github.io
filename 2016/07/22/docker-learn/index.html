@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>docker-learn | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="安装 docker  详细步骤   Docker is supported on these Ubuntu operating systems:Ubuntu Xenial 16.04 (LTS)Ubuntu Wily 15.10Ubuntu Trusty 14.04 (LTS)Ubuntu Precise 12.04 (LTS) linux内核支持 uname -r 查看  Update you">
+<meta name="keywords" content="docker">
+<meta property="og:type" content="article">
+<meta property="og:title" content="docker-learn">
+<meta property="og:url" content="http://yoursite.com/2016/07/22/docker-learn/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="安装 docker  详细步骤   Docker is supported on these Ubuntu operating systems:Ubuntu Xenial 16.04 (LTS)Ubuntu Wily 15.10Ubuntu Trusty 14.04 (LTS)Ubuntu Precise 12.04 (LTS) linux内核支持 uname -r 查看  Update you">
+<meta property="og:updated_time" content="2017-04-12T23:22:16.593Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="docker-learn">
+<meta name="twitter:description" content="安装 docker  详细步骤   Docker is supported on these Ubuntu operating systems:Ubuntu Xenial 16.04 (LTS)Ubuntu Wily 15.10Ubuntu Trusty 14.04 (LTS)Ubuntu Precise 12.04 (LTS) linux内核支持 uname -r 查看  Update you">
+  
+    <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <!-- Piwik -->
+  <script type="text/javascript">
+    var _paq = _paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+      var u="//tracker.doaidea.com/";
+      _paq.push(['setTrackerUrl', u+'piwik.php']);
+      _paq.push(['setSiteId', '1']);
+      var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+      g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+    })();
+  </script>
+  <!-- End Piwik Code -->
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="null" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">maidol</a></h1>
+		</hgroup>
+
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>Menu</li>
+						<li>Tags</li>
+						
+						<li>Links</li>
+						
+						
+						<li>Über</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="#" title="github">github</a>
+					        
+								<a class="weibo" target="_blank" href="#" title="weibo">weibo</a>
+					        
+								<a class="rss" target="_blank" href="#" title="rss">rss</a>
+					        
+								<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/cmd/" style="font-size: 10px;">cmd</a> <a href="/tags/deploy/" style="font-size: 20px;">deploy</a> <a href="/tags/docker/" style="font-size: 10px;">docker</a> <a href="/tags/docker-compose/" style="font-size: 10px;">docker-compose</a> <a href="/tags/git/" style="font-size: 15px;">git</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/iaas/" style="font-size: 10px;">iaas</a> <a href="/tags/ipv6/" style="font-size: 10px;">ipv6</a> <a href="/tags/linode/" style="font-size: 10px;">linode</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/nginx/" style="font-size: 10px;">nginx</a> <a href="/tags/paas/" style="font-size: 10px;">paas</a> <a href="/tags/saas/" style="font-size: 10px;">saas</a> <a href="/tags/tmux/" style="font-size: 10px;">tmux</a> <a href="/tags/ubuntu/" style="font-size: 10px;">ubuntu</a> <a href="/tags/vpn/" style="font-size: 10px;">vpn</a> <a href="/tags/vps/" style="font-size: 10px;">vps</a> <a href="/tags/webpack/" style="font-size: 10px;">webpack</a> <a href="/tags/weichat/" style="font-size: 10px;">weichat</a> <a href="/tags/二进制格式/" style="font-size: 10px;">二进制格式</a> <a href="/tags/入门/" style="font-size: 10px;">入门</a> <a href="/tags/公众号/" style="font-size: 10px;">公众号</a> <a href="/tags/分布式/" style="font-size: 10px;">分布式</a> <a href="/tags/基础/" style="font-size: 10px;">基础</a> <a href="/tags/微信/" style="font-size: 10px;">微信</a> <a href="/tags/文本/" style="font-size: 10px;">文本</a> <a href="/tags/自动化部署/" style="font-size: 10px;">自动化部署</a> <a href="/tags/集群/" style="font-size: 10px;">集群</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">奥巴马的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">卡卡的美丽传说</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">本泽马的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">吉格斯的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">习大大大不同</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">托蒂的博客</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">我是谁，我从哪里来，我到哪里去？我就是我，是颜色不一样的吃货…</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">maidol</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+			
+				<img lazy-src="null" class="js-avatar">
+			
+			</div>
+			<hgroup>
+			  <h1 class="header-author">maidol</h1>
+			</hgroup>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="#" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="#" title="weibo">weibo</a>
+			        
+						<a class="rss" target="_blank" href="#" title="rss">rss</a>
+			        
+						<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap"><article id="post-docker-learn" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/07/22/docker-learn/" class="article-date">
+  	<time datetime="2016-07-22T14:37:00.000Z" itemprop="datePublished">2016-07-22</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      docker-learn
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/docker/">docker</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ul>
+<li><p>安装 docker  详细步骤</p>
+<blockquote>
+<ul>
+<li>Docker is supported on these Ubuntu operating systems:<br>Ubuntu Xenial 16.04 (LTS)<br>Ubuntu Wily 15.10<br>Ubuntu Trusty 14.04 (LTS)<br>Ubuntu Precise 12.04 (LTS)</li>
+<li>linux内核支持 <code>uname -r</code> 查看</li>
+<li><ol>
+<li>Update your apt sources<blockquote>
+<ul>
+<li>Docker requires a 64-bit installation regardless of your Ubuntu version. Additionally, your kernel must be 3.10 at minimum </li>
+<li><code>sudo apt-get update</code> <code>sudo apt-get install apt-transport-https ca-certificates</code> </li>
+<li>Add the new GPG key. <code>sudo apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 58118E89F3A912897C070ADBF76221572C52609D</code> </li>
+<li>设置下载源entries, Open the /etc/apt/sources.list.d/docker.list file in your favorite editor, If the file doesn’t exist, create it.<blockquote>
+<ul>
+<li><code>vim /etc/apt/sources.list.d/docker.list</code> </li>
+<li>Remove any existing entries. </li>
+<li>Add an entry for your Ubuntu operating system.<blockquote>
+<ul>
+<li>The possible entries are:<br>On Ubuntu Precise 12.04 (LTS)<br>deb <a href="https://apt.dockerproject.org/repo" target="_blank" rel="external">https://apt.dockerproject.org/repo</a> ubuntu-precise main<br>On Ubuntu Trusty 14.04 (LTS)<br>deb <a href="https://apt.dockerproject.org/repo" target="_blank" rel="external">https://apt.dockerproject.org/repo</a> ubuntu-trusty main<br>Ubuntu Wily 15.10<br>deb <a href="https://apt.dockerproject.org/repo" target="_blank" rel="external">https://apt.dockerproject.org/repo</a> ubuntu-wily main<br>Ubuntu Xenial 16.04 (LTS)<br>deb <a href="https://apt.dockerproject.org/repo" target="_blank" rel="external">https://apt.dockerproject.org/repo</a> ubuntu-xenial main</li>
+</ul>
+</blockquote>
+</li>
+<li>Save and close the /etc/apt/sources.list.d/docker.list file.</li>
+</ul>
+</blockquote>
+</li>
+<li>Update the APT package index. <code>sudo apt-get update</code> </li>
+<li>Purge the old repo if it exists. <code>sudo apt-get purge lxc-docker</code> </li>
+<li>Verify that APT is pulling from the right repository. <code>apt-cache policy docker-engine</code> </li>
+<li>From now on when you run <code>apt-get upgrade</code>, APT pulls from the new repository.</li>
+</ul>
+</blockquote>
+</li>
+</ol>
+</li>
+<li><ol>
+<li>Prerequisites by Ubuntu Version<blockquote>
+<ul>
+<li>Ubuntu Xenial 16.04 (LTS) / Ubuntu Wily 15.10 / Ubuntu Trusty 14.04 (LTS)<br>For Ubuntu Trusty, Wily, and Xenial, it’s recommended to install the linux-image-extra kernel package. The linux-image-extra package allows you use the aufs storage driver.</li>
+</ul>
+</blockquote>
+</li>
+</ol>
+</li>
+</ul>
+</blockquote>
+<p>  To install the linux-image-extra package for your kernel version:</p>
+<p>  Open a terminal on your Ubuntu host.</p>
+</li>
+</ul>
+<blockquote>
+<blockquote>
+<blockquote>
+<ul>
+<li>Update your package manager. <code>sudo apt-get update</code> </li>
+<li>Install the recommended package. <code>sudo apt-get install linux-image-extra-$(uname -r)</code> </li>
+<li>Go ahead and install Docker.</li>
+<li>If you are installing on Ubuntu 14.04 or 12.04, apparmor is required. You can install it using: <code>sudo apt-get install apparmor</code> </li>
+<li>Ubuntu Precise 12.04 (LTS)</li>
+<li><code>uname -r</code> 查看 </li>
+<li>For Ubuntu Precise, Docker requires the 3.13 kernel version. If your kernel version is older than 3.13, you must upgrade it. Refer to this table to see which packages are required for your environment</li>
+<li><code>sudo apt-get update</code> </li>
+<li>Install both the required and optional packages <code>sudo apt-get install linux-image-generic-lts-trusty</code> </li>
+<li><code>sudo apt-get update</code> </li>
+<li><h2 id="apparmor-failed-to-apply-profile-no-such-file-or-directory-sudo-apt-get-update-sudo-apt-get-install-apparmor"><a href="#apparmor-failed-to-apply-profile-no-such-file-or-directory-sudo-apt-get-update-sudo-apt-get-install-apparmor" class="headerlink" title="apparmor failed to apply profile: no such file or directory sudo apt-get update sudo apt-get install apparmor"></a>apparmor failed to apply profile: no such file or directory <code>sudo apt-get update</code> <code>sudo apt-get install apparmor</code></h2></li>
+<li><code>sudo reboot</code> After your system reboots, go ahead and install Docker. </li>
+<li><ol>
+<li>Install (安装和运行都需要sudo或者root)</li>
+</ol>
+</li>
+<li><code>sudo apt-get update</code> </li>
+<li><code>sudo apt-get install docker-engine</code> </li>
+<li><code>sudo service docker start</code> </li>
+<li>Verify docker is installed correctly. <code>sudo docker run hello-world</code> This command downloads a test image and runs it in a container. When the container runs, it prints an informational message. Then, it exits. </li>
+<li>ubuntu 14 docker安装</li>
+<li><code>sudo apt-get install lxc-docker</code> </li>
+<li><code>sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 36A1D7869245C8950F966E92D8576A8BA88D21E9</code> </li>
+<li><code>sudo bash -c &quot;echo deb https://get.docker.io/ubuntu docker main &gt; /etc/apt/sources.list.d/docker.list&quot;</code> </li>
+<li><code>sudo apt-get update</code> </li>
+<li><code>sudo apt-get install lxc-docker</code> </li>
+<li><code>sudo service docker start</code> </li>
+<li><code>docker version</code>  </li>
+<li>安装 Docker 官方的最新发行版， 支持 Ubuntu 12.04 以上版本</li>
+<li><code>sudo apt-get update</code> </li>
+<li>Install both the required and optional packages <code>sudo apt-get install linux-image-generic-lts-trusty</code> </li>
+<li><code>sudo apt-get update</code> </li>
+<li><h2 id="apparmor-failed-to-apply-profile-no-such-file-or-directory-sudo-apt-get-update-sudo-apt-get-install-apparmor-1"><a href="#apparmor-failed-to-apply-profile-no-such-file-or-directory-sudo-apt-get-update-sudo-apt-get-install-apparmor-1" class="headerlink" title="apparmor failed to apply profile: no such file or directory sudo apt-get update sudo apt-get install apparmor"></a>apparmor failed to apply profile: no such file or directory <code>sudo apt-get update</code> <code>sudo apt-get install apparmor</code></h2></li>
+<li><code>sudo reboot</code> After your system reboots, go ahead and install Docker. </li>
+<li><code>curl -sSL https://get.daocloud.io/docker | sh</code>  or <code>curl -sSL https://get.docker.com/ | bash -x</code> </li>
+<li><code>sudo service docker status</code> 输出 docker start/running 就表示安装成功 </li>
+<li>docker常用命令</li>
+<li><code>docker images</code> 列出所有镜像(images) </li>
+<li><code>docker ps -a/-l</code>    列出正在运行的(容器)containers </li>
+<li><code>docker pull ubuntu</code> 下载镜像 </li>
+<li><code>docker run -i -t ubuntu /bin/bash</code>  运行ubuntu镜像 , 无论前台/后台(-d)运行, 都建议默认加-i参数: -i: Keep STDIN open even if not attached </li>
+<li><code>docker run -d -i ubuntu /bin/bash</code> 后台运行, 并附加进一个stdin控制台, 如果/bin/bash被脚本文件(例如/init.sh)代替的话, 则脚本文件里必须加上/bin/bash , 如果缺少/bin/bash则 -i 参数不会起作用; 如果<code>docker run -d -i ubuntu</code>后面没有/bin/bash或者脚本文件路径(例如/init.sh), 则默认是/bin/bash </li>
+<li><code>docker commit 3a09b2588478 ubuntu:mynewimage</code>  提交你的变更，并且把容器保存成Tag为mynewimage的新的ubuntu镜像.(注意，这里提交只是提交到本地仓库，类似git) </li>
+<li>卸载</li>
+<li><code>sudo apt-get purge docker-engine</code> </li>
+<li><code>sudo apt-get autoremove --purge docker-engine</code> </li>
+<li><code>sudo rm -rf /var/lib/docker</code> </li>
+<li>Docker去sudo</li>
+<li>在Ubuntu下，在执行Docker时，每次都要输入sudo，同时输入密码，这里把当前用户执行权限添加到相应的docker用户组里面 </li>
+<li>添加一个新的docker用户组 <code>sudo groupadd docker</code> </li>
+<li>添加当前用户到docker用户组里，注意这里的king为ubuntu登录用户名 <code>sudo usermod -aG docker king</code> </li>
+<li>重启Docker后台监护进程 <code>sudo service docker restart</code> </li>
+<li>重启之后，尝试一下，是否生效 <code>docker version</code> </li>
+<li>若还未生效，则系统重启，则生效 <code>sudo reboot</code> </li>
+<li>Cannot connect to the Docker daemon. Is the docker daemon running on this host? </li>
+<li>出现这种错误 先尝试用sudo执行, 再尝试下面步骤 </li>
+<li>Check that the DOCKER_HOST environment variable is not set for your shell. If it is, unset it.</li>
+<li>还是不行则尝试 <code>sudo service docker stop</code> <code>sudo rm -rf /var/lib/docker</code> <code>sudo service docker start</code>  <code>sudo docker version</code> <blockquote>
+<ul>
+<li>The above commands will not remove images, containers, volumes, or user created configuration files on your host. If you wish to delete all images, containers, and volumes run the following command:<code>sudo rm -rf /var/lib/docker</code> </li>
+</ul>
+</blockquote>
+</li>
+<li>如何进入Docker容器进程及如何退出</li>
+<li>如果启动了Docker容器，比如这样：<code>docker run -itd -p 3000:3000 --name my-web -v &quot;$(pwd)&quot;:/webapp -w /webapp node npm start</code> </li>
+<li>我启动了一个Node Web App。如何看到终端打印的报错和日志呢？docker有命令可以让你进入（attach）和退出（detach）该进程  <code>docker attach my-web</code> </li>
+<li>退出，一定不要用ctrl+c，那样就是让docker容器停止了。先按，ctrl+p 再按，ctrl+q</li>
+<li>只有在启动时附加参数 -it 才能 ctrl+p ctrl+q 退出  </li>
+<li>-d -t -i 参数 , exec </li>
+<li><code>docker run -d rabbitmq</code>  参数运行了容器, <code>docker exec -it rabbitmq /bin/bash</code> 可以进入容器进行管理 <code>exit</code> 退出 , 对容器修改后, 可通过 <code>commit</code> 固化为images  </li>
+<li>使用daocloud加速器 加速镜像下载速度</li>
+<li>需要登录daocloud <a href="https://dashboard.daocloud.io/" target="_blank" rel="external">https://dashboard.daocloud.io/</a>, 选择加速器选项 -&gt; 立即开始</li>
+<li>按照提示安装</li>
+<li>安装 Docker安装 Docker 官方的最新发行版， 支持 Ubuntu 12.04 以上版本</li>
+<li><code>curl -sSL https://get.daocloud.io/docker | sh</code> <code>sudo service docker status</code> 输出 docker start/running 就表示安装成功 </li>
+<li>安装主机监控程序</li>
+<li><code>curl -sSL https://get.daocloud.io/daomonit/install.sh | sh -s xxxxxxxxxxxxxxxxxxxxxxx</code>  </li>
+<li>删除操作仅适用于已经断开连接的主机，您可以通过下述命令卸载主机监控程序，再进行删除 </li>
+<li><code>dpkg -r daomonit # For Ubuntu/Debian</code> <code>rpm -e daomonit  # For CentOS/Fedora</code> </li>
+<li>自有主机会跟daocloud账号绑定 </li>
+<li><code>dao pull images</code> 使用dao命令拉取镜像 , 如果开通了<a href="http://docs.daocloud.io/daocloud-registry/pull-push" target="_blank" rel="external">我的镜像</a>服务, 可以登录: <code>docker login daocloud.io</code> </li>
+<li>daocloud是国内的镜像下载源, docker hub是国外的镜像下载源,<code>docker login daocloud.io</code> 可登陆daocloud,  执行<code>docker login</code>按提示可以登录docker hub, 可以管理自己的镜像 , pull/push </li>
+</ul>
+</blockquote>
+</blockquote>
+</blockquote>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/07/20/weichat-study/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          hexo-deploy
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/07/22/iaas-paas-saas-理解/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">iaas-paas-saas</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+    <a class="jiathis_button_twitter"></a>
+    <a class="jiathis_button_plus"></a> 
+    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="docker-learn" data-title="docker-learn" data-url="http://yoursite.com/2016/07/22/docker-learn/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2017 maidol
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="//7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>
