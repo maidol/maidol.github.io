@@ -4,26 +4,26 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>DrSG Harness Kit 设计与使用指南 | Hexo</title>
+  <title>docker-learn | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="在将大语言模型（LLM）引入复杂工程实践的过程中，几乎所有开发者都会遇到两大核心瓶颈：智能体上下文记忆的断裂以及对大型代码库结构理解的粗糙与失真。 面对数百个源文件和复杂的依赖网络，基于纯文本匹配（grep / rg）的搜索方式不仅容易产生大量误报，更无法回答「改动这个函数会影响哪些调用方」、「类型依赖如何逐级传递」等深度问题。与此同时，随着会话被压缩（compact）或结束，智能体上一轮踩坑沉淀">
 <meta name="keywords" content="AI Agent,Code Graph,DrSG,Claude Code">
 <meta property="og:type" content="article">
-<meta property="og:title" content="DrSG Harness Kit 设计与使用指南">
-<meta property="og:url" content="http://yoursite.com/2026/09/23/drsg-harness-kit/index.html">
+<meta property="og:title" content="docker-learn">
+<meta property="og:url" content="http://yoursite.com/2016/07/22/drsg-harness-kit/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="在将大语言模型（LLM）引入复杂工程实践的过程中，几乎所有开发者都会遇到两大核心瓶颈：智能体上下文记忆的断裂以及对大型代码库结构理解的粗糙与失真。 面对数百个源文件和复杂的依赖网络，基于纯文本匹配（grep / rg）的搜索方式不仅容易产生大量误报，更无法回答「改动这个函数会影响哪些调用方」、「类型依赖如何逐级传递」等深度问题。与此同时，随着会话被压缩（compact）或结束，智能体上一轮踩坑沉淀">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="http://yoursite.com/images/drsg-harness-kit/daemon-topology.svg">
-<meta property="og:image" content="http://yoursite.com/images/drsg-harness-kit/code-plane-architecture.svg">
-<meta property="og:image" content="http://yoursite.com/images/drsg-harness-kit/codegraph-router-architecture.svg">
-<meta property="og:image" content="http://yoursite.com/images/drsg-harness-kit/memory-sharing-flow.svg">
-<meta property="og:image" content="http://yoursite.com/images/drsg-harness-kit/memory-sharing-architecture.svg">
-<meta property="og:updated_time" content="2026-09-24T16:07:01.154Z">
+<meta property="og:image" content="http://yoursite.com/2016/07/22/drsg-harness-kit/drsg-harness-kit/daemon-topology.svg">
+<meta property="og:image" content="http://yoursite.com/2016/07/22/drsg-harness-kit/drsg-harness-kit/code-plane-architecture.svg">
+<meta property="og:image" content="http://yoursite.com/2016/07/22/drsg-harness-kit/drsg-harness-kit/codegraph-router-architecture.svg">
+<meta property="og:image" content="http://yoursite.com/2016/07/22/drsg-harness-kit/drsg-harness-kit/memory-sharing-flow.svg">
+<meta property="og:image" content="http://yoursite.com/2016/07/22/drsg-harness-kit/drsg-harness-kit/memory-sharing-architecture.svg">
+<meta property="og:updated_time" content="2026-09-24T15:43:18.878Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="DrSG Harness Kit 设计与使用指南">
+<meta name="twitter:title" content="docker-learn">
 <meta name="twitter:description" content="在将大语言模型（LLM）引入复杂工程实践的过程中，几乎所有开发者都会遇到两大核心瓶颈：智能体上下文记忆的断裂以及对大型代码库结构理解的粗糙与失真。 面对数百个源文件和复杂的依赖网络，基于纯文本匹配（grep / rg）的搜索方式不仅容易产生大量误报，更无法回答「改动这个函数会影响哪些调用方」、「类型依赖如何逐级传递」等深度问题。与此同时，随着会话被压缩（compact）或结束，智能体上一轮踩坑沉淀">
-<meta name="twitter:image" content="http://yoursite.com/images/drsg-harness-kit/daemon-topology.svg">
+<meta name="twitter:image" content="http://yoursite.com/2016/07/22/drsg-harness-kit/drsg-harness-kit/daemon-topology.svg">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -138,7 +138,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/AI-Agent/" style="font-size: 10px;">AI Agent</a> <a href="/tags/Claude-Code/" style="font-size: 10px;">Claude Code</a> <a href="/tags/Code-Graph/" style="font-size: 10px;">Code Graph</a> <a href="/tags/DrSG/" style="font-size: 10px;">DrSG</a> <a href="/tags/cmd/" style="font-size: 10px;">cmd</a> <a href="/tags/deploy/" style="font-size: 20px;">deploy</a> <a href="/tags/docker/" style="font-size: 10px;">docker</a> <a href="/tags/docker-compose/" style="font-size: 10px;">docker-compose</a> <a href="/tags/git/" style="font-size: 15px;">git</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/iaas/" style="font-size: 10px;">iaas</a> <a href="/tags/ipv6/" style="font-size: 10px;">ipv6</a> <a href="/tags/linode/" style="font-size: 10px;">linode</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/nginx/" style="font-size: 10px;">nginx</a> <a href="/tags/paas/" style="font-size: 10px;">paas</a> <a href="/tags/saas/" style="font-size: 10px;">saas</a> <a href="/tags/tmux/" style="font-size: 10px;">tmux</a> <a href="/tags/ubuntu/" style="font-size: 10px;">ubuntu</a> <a href="/tags/vpn/" style="font-size: 10px;">vpn</a> <a href="/tags/vps/" style="font-size: 10px;">vps</a> <a href="/tags/webpack/" style="font-size: 10px;">webpack</a> <a href="/tags/weichat/" style="font-size: 10px;">weichat</a> <a href="/tags/二进制格式/" style="font-size: 10px;">二进制格式</a> <a href="/tags/入门/" style="font-size: 10px;">入门</a> <a href="/tags/公众号/" style="font-size: 10px;">公众号</a> <a href="/tags/分布式/" style="font-size: 10px;">分布式</a> <a href="/tags/基础/" style="font-size: 10px;">基础</a> <a href="/tags/微信/" style="font-size: 10px;">微信</a> <a href="/tags/文本/" style="font-size: 10px;">文本</a> <a href="/tags/自动化部署/" style="font-size: 10px;">自动化部署</a> <a href="/tags/集群/" style="font-size: 10px;">集群</a>
+						<a href="/tags/AI-Agent/" style="font-size: 15px;">AI Agent</a> <a href="/tags/Claude-Code/" style="font-size: 15px;">Claude Code</a> <a href="/tags/Code-Graph/" style="font-size: 15px;">Code Graph</a> <a href="/tags/DrSG/" style="font-size: 15px;">DrSG</a> <a href="/tags/cmd/" style="font-size: 10px;">cmd</a> <a href="/tags/deploy/" style="font-size: 20px;">deploy</a> <a href="/tags/docker/" style="font-size: 10px;">docker</a> <a href="/tags/git/" style="font-size: 15px;">git</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/iaas/" style="font-size: 10px;">iaas</a> <a href="/tags/ipv6/" style="font-size: 10px;">ipv6</a> <a href="/tags/linode/" style="font-size: 10px;">linode</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/nginx/" style="font-size: 10px;">nginx</a> <a href="/tags/paas/" style="font-size: 10px;">paas</a> <a href="/tags/saas/" style="font-size: 10px;">saas</a> <a href="/tags/tmux/" style="font-size: 10px;">tmux</a> <a href="/tags/ubuntu/" style="font-size: 10px;">ubuntu</a> <a href="/tags/vpn/" style="font-size: 10px;">vpn</a> <a href="/tags/vps/" style="font-size: 10px;">vps</a> <a href="/tags/webpack/" style="font-size: 10px;">webpack</a> <a href="/tags/weichat/" style="font-size: 10px;">weichat</a> <a href="/tags/二进制格式/" style="font-size: 10px;">二进制格式</a> <a href="/tags/入门/" style="font-size: 10px;">入门</a> <a href="/tags/公众号/" style="font-size: 10px;">公众号</a> <a href="/tags/分布式/" style="font-size: 10px;">分布式</a> <a href="/tags/基础/" style="font-size: 10px;">基础</a> <a href="/tags/微信/" style="font-size: 10px;">微信</a> <a href="/tags/文本/" style="font-size: 10px;">文本</a> <a href="/tags/集群/" style="font-size: 10px;">集群</a>
 					</div>
 				</section>
 				
@@ -223,8 +223,8 @@
       <div class="body-wrap"><article id="post-drsg-harness-kit" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2026/09/23/drsg-harness-kit/" class="article-date">
-  	<time datetime="2026-09-23T18:30:00.000Z" itemprop="datePublished">2026-09-23</time>
+      <a href="/2016/07/22/drsg-harness-kit/" class="article-date">
+  	<time datetime="2016-07-22T22:37:00.000Z" itemprop="datePublished">2016-07-22</time>
 </a>
     </div>
   
@@ -237,7 +237,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      DrSG Harness Kit 设计与使用指南
+      docker-learn
     </h1>
   
 
@@ -250,10 +250,6 @@
 	</div>
 
         
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/AI-Tools/">AI & Tools</a>
-	</div>
-
 
         <div class="clearfix"></div>
       </div>
@@ -267,7 +263,7 @@
 <p>本文将全面拆解 DrSG Harness Kit 的双平面架构设计、工作机制、核心动词规范以及在生产环境中的实战部署与使用方法。</p>
 <hr>
 <h2 id="一、双平面架构设计与核心原理"><a href="#一、双平面架构设计与核心原理" class="headerlink" title="一、双平面架构设计与核心原理"></a>一、双平面架构设计与核心原理</h2><p>DrSG Harness Kit 最核心的架构特征在于<strong>「代码图」与「记忆层」的双平面彻底隔离与拓扑正交</strong>。</p>
-<p><img src="/images/drsg-harness-kit/daemon-topology.svg" alt="一台机器上的部署拓扑：记忆层一个全局 daemon，代码图每仓一个"></p>
+<p><img src="drsg-harness-kit/daemon-topology.svg" alt="一台机器上的部署拓扑：记忆层一个全局 daemon，代码图每仓一个"></p>
 <p>两边是<strong>方向相反</strong>的：记忆层聚合（一个 daemon、一个库，按 <code>p.path</code> 分项目），代码图独立（一仓一端口、一仓一库）。两个 daemon 都不开机自启，按需启动。</p>
 <h3 id="1-1-两个平面的本质差异"><a href="#1-1-两个平面的本质差异" class="headerlink" title="1.1 两个平面的本质差异"></a>1.1 两个平面的本质差异</h3><table>
 <thead>
@@ -313,12 +309,12 @@
 <li><strong>标记解析边界</strong>：对于动态语言特性或跨模块未确定的引用，明确记录为 <code>UnresolvedRef</code> 节点——<strong>能够明确指出「未解析」而不是凭空猜测，是代码图敢于返回「不存在」的前提</strong>。</li>
 <li><strong>性能表现</strong>：首次载入 wasm 插件约耗时 13 秒，但之后的每次增量提交折叠仅需 1~2 秒左右。</li>
 </ol>
-<p><img src="/images/drsg-harness-kit/code-plane-architecture.svg" alt="代码图的工作原理：源码树经 wasm 插件折进 plane，动词从 plane 读，snippet 还要读文件树"></p>
+<p><img src="drsg-harness-kit/code-plane-architecture.svg" alt="代码图的工作原理：源码树经 wasm 插件折进 plane，动词从 plane 读，snippet 还要读文件树"></p>
 <p>图中那条区别对待的线值得重点关注：<strong>结构类动词（<code>context</code> / <code>impact</code> / <code>trace</code> / <code>describe</code>）只查 plane，因此跨仓可用；而 <code>grep</code> 和 <code>snippet</code> 要读文件树，文件树是进程级的（由 <code>--dir</code> 指定），与调用时传的 <code>plane</code> 无关</strong>。这意味着跨仓问结构没问题，但跨仓要源码必须找该仓库自己的 daemon。</p>
 <hr>
 <h2 id="二、Codegraph-Router：多仓代码图的统一入口"><a href="#二、Codegraph-Router：多仓代码图的统一入口" class="headerlink" title="二、Codegraph Router：多仓代码图的统一入口"></a>二、Codegraph Router：多仓代码图的统一入口</h2><p>在多项目开发中，如果智能体每切换一个仓库都需要重新配置一套 MCP 地址与 Token，协作体验将非常割裂。此外，模型很容易传错 <code>plane</code> 参数（默认的 <code>startup</code> 是空平面，返回 <code>no symbol matches</code>，使模型误以为符号不存在）。</p>
 <p>为此，Kit 提供了 <code>codegraph-router.py</code>，实现 MCP-to-MCP 的透明路由分发：</p>
-<p><img src="/images/drsg-harness-kit/codegraph-router-architecture.svg" alt="router 的结构：registry 只存路径，地址与 token 现读各仓自己的 .mcp.json"></p>
+<p><img src="drsg-harness-kit/codegraph-router-architecture.svg" alt="router 的结构：registry 只存路径，地址与 token 现读各仓自己的 .mcp.json"></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">智能体在任意工作区提出请求：</span><br><span class="line">&quot;查一下 drsg-harness-kit 里的 searches 函数定义&quot;</span><br><span class="line">                       │</span><br><span class="line">                       ▼</span><br><span class="line">             [ Codegraph Router ]</span><br><span class="line">                       │</span><br><span class="line">      读取 ~/.drsg-memory/graphs (仓库注册表)</span><br><span class="line">                       │</span><br><span class="line">       目标: /data/projects/maidol/drsg-harness-kit</span><br><span class="line">                       │</span><br><span class="line">     读取目标仓库的 .mcp.json (地址与 Bearer Token)</span><br><span class="line">                       │</span><br><span class="line">           目标 Daemon 是否存活？</span><br><span class="line">             ├── 是: 直接转发请求</span><br><span class="line">             └── 否: 懒启动目标 daemon (codegraph.sh start --dir ...)</span><br><span class="line">                       │</span><br><span class="line">                       ▼</span><br><span class="line">            目标仓库 Code Graph Daemon</span><br><span class="line">    (执行解析并返回：codegraph-usage.searches Function)</span><br></pre></td></tr></table></figure>
 <p><strong>Router 的核心优势</strong>：</p>
 <ul>
@@ -402,7 +398,7 @@
 <h2 id="四、长期记忆层机制：Fact、Event-与生命周期-Hooks"><a href="#四、长期记忆层机制：Fact、Event-与生命周期-Hooks" class="headerlink" title="四、长期记忆层机制：Fact、Event 与生命周期 Hooks"></a>四、长期记忆层机制：Fact、Event 与生命周期 Hooks</h2><p>记忆层建立在 <code>~/.drsg-memory/memory.drsg</code> 数据库之上，核心围绕以下图谱模型运转：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[Project] &lt;────BELONGS_TO──── [Session] (单次交互会话元数据)</span><br><span class="line">   │</span><br><span class="line">   ├─────ABOUT──────────────&gt; [Fact]    (高价值工程结论、踩坑教训、规则约束)</span><br><span class="line">   │</span><br><span class="line">   └─────NOTIFY─────────────&gt; [Event]   (待办提醒、跨项目协作交接通知)</span><br></pre></td></tr></table></figure>
 <h3 id="4-1-会话全生命周期流程"><a href="#4-1-会话全生命周期流程" class="headerlink" title="4.1 会话全生命周期流程"></a>4.1 会话全生命周期流程</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">1. 会话启动 (SessionStart Hook)</span><br><span class="line">   ├── 注册 / 恢复 Session 节点</span><br><span class="line">   ├── 计算本项目所有 Fact，生成常驻精炼简报 (Briefing)</span><br><span class="line">   ├── 查询关联的未处理 Event (最多 3 条跨项目待办)</span><br><span class="line">   └── 将常驻记忆注入智能体上下文</span><br><span class="line"></span><br><span class="line">2. 提示词提交 (UserPromptSubmit Hook)</span><br><span class="line">   ├── 对用户输入提取 N-gram + IDF 关键词</span><br><span class="line">   ├── 语义召回高度相关的历史 Fact (最多 4 条，支持跨项目命中)</span><br><span class="line">   └── 记录命中遥测至 recall.jsonl (用于后续分析召回质量)</span><br><span class="line"></span><br><span class="line">3. 会话压缩 (compact)</span><br><span class="line">   └── 会话触发上下文截断时，重新触发简报重注入，确保全局认知不丢失</span><br><span class="line"></span><br><span class="line">4. 会话结束 (SessionEnd Hook)</span><br><span class="line">   └── 记录会话耗时，从 transcript 中统计工具调用成败与命令表现</span><br></pre></td></tr></table></figure>
-<p><img src="/images/drsg-harness-kit/memory-sharing-flow.svg" alt="一次会话的完整流程：启动注入、每轮召回、会话内写入、收尾，六条泳道"></p>
+<p><img src="drsg-harness-kit/memory-sharing-flow.svg" alt="一次会话的完整流程：启动注入、每轮召回、会话内写入、收尾，六条泳道"></p>
 <p>整个会话生命周期清晰划分为：启动注入、每轮召回、会话内写入与收尾。其中遥测（<code>recall.jsonl</code>）不论命中与否都会记录一行，这是后续评估召回质量的量化基础；跨项目待办（Event）独立于评分排序，直接由终端提示给人看，避免干扰模型的常规上下文。</p>
 <h3 id="4-2-跨项目-Event-闭环机制"><a href="#4-2-跨项目-Event-闭环机制" class="headerlink" title="4.2 跨项目 Event 闭环机制"></a>4.2 跨项目 Event 闭环机制</h3><p>当我们在仓库 A 完成了某项基础库改造，需要提醒仓库 B 进行适配时，只需写入一条目标为仓库 B 路径的 <code>Event</code> 节点：</p>
 <ul>
@@ -421,7 +417,7 @@
 <li>为指定项目复制并配置 <code>.claude/hooks/</code> 和 <code>.drsg/env</code>（权限 <code>chmod 600</code>）；</li>
 <li>自动注册本地代码图服务至 <code>.mcp.json</code> 并执行连通性自检。</li>
 </ul>
-<p><img src="/images/drsg-harness-kit/memory-sharing-architecture.svg" alt="装完之后的样子：项目里只有配置与遥测，daemon 和库全机唯一一份"></p>
+<p><img src="drsg-harness-kit/memory-sharing-architecture.svg" alt="装完之后的样子：项目里只有配置与遥测，daemon 和库全机唯一一份"></p>
 <p>从图中清晰可见：<strong>留在项目里的只有 <code>.drsg/env</code>（Token 配置，权限 600，已加入 gitignore）、Hooks 脚本和 <code>.drsg/recall.jsonl</code></strong>；而 Daemon 进程与数据库 <code>memory.drsg</code> 全机只有一份。因此新增一个项目不会额外增加 Daemon 开销，删除一个项目也绝不会破坏其他项目的持久记忆。</p>
 <h3 id="5-2-日常健康检查"><a href="#5-2-日常健康检查" class="headerlink" title="5.2 日常健康检查"></a>5.2 日常健康检查</h3><p>在遇到任何智能体工具异常或配置变更后，可通过以下三条命令完成快速体检：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 1. 检查全局共享记忆层状态 (Daemon 是否运行、端口、DB 文件位置)</span></span><br><span class="line">~/.drsg-memory/tools/serve.sh status</span><br><span class="line"></span><br><span class="line"><span class="comment"># 2. 检查特定仓库代码图状态 (同步状态、最新折叠 Commit、规则守护状态)</span></span><br><span class="line">~/.drsg-memory/tools/codegraph.sh doctor --dir /path/to/repo</span><br><span class="line"></span><br><span class="line"><span class="comment"># 3. 检查项目 Hooks 与最新模板的一致性 (检测配置漂移)</span></span><br><span class="line">~/.drsg-memory/tools/install.sh --check</span><br></pre></td></tr></table></figure>
@@ -442,9 +438,18 @@
     
 <nav id="article-nav">
   
+    <a href="/2016/07/23/tmux-learn/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          tmux-learn
+        
+      </div>
+    </a>
   
-    <a href="/2026/09/23/文本与二进制格式/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">文本与二进制格式</div>
+  
+    <a href="/2016/07/22/docker-learn/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">docker-learn</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -479,7 +484,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="drsg-harness-kit" data-title="DrSG Harness Kit 设计与使用指南" data-url="http://yoursite.com/2026/09/23/drsg-harness-kit/"></div>
+	<div class="ds-thread" data-thread-key="drsg-harness-kit" data-title="docker-learn" data-url="http://yoursite.com/2016/07/22/drsg-harness-kit/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">

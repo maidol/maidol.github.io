@@ -4,20 +4,20 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>分布式集群的理解 | Hexo</title>
+  <title>DrSG Harness Kit 设计与使用指南 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="分布式：一个业务分拆多个子业务，部署在不同的服务器上集群：同一个业务，部署在多个服务器上   1：分布式是指将不同的业务分布在不同的地方。 而集群指的是将几台服务器集中在一起，实现同一业务。分布式中的每一个节点，都可以做集群。 而集群并不一定就是分布式的。   举例：就比如新浪网，访问的人多了，他可以做一个群集，前面放一个响应服务器，后面几台服务器完成同一业务，如果有业务访问的时候，响应服务器看">
-<meta name="keywords" content="分布式,集群">
+  <meta name="description" content="linux cmd 常用命令  释放内存 sudo sh -c &amp;quot;echo 3 &amp;gt; /proc/sys/vm/drop_caches&amp;quot;  查询当前文件夹空间大小 du -hsx * | sort -rh | head -10  内存/磁盘空间不足会导致bash tab无法补全 / pm2无法启动 / docker pull / docker start 无法成功执行 /">
+<meta name="keywords" content="linux,cmd">
 <meta property="og:type" content="article">
-<meta property="og:title" content="分布式集群的理解">
-<meta property="og:url" content="http://yoursite.com/2016/07/25/分布式集群的理解/index.html">
+<meta property="og:title" content="DrSG Harness Kit 设计与使用指南">
+<meta property="og:url" content="http://yoursite.com/2026/09/23/linux-cmd/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="分布式：一个业务分拆多个子业务，部署在不同的服务器上集群：同一个业务，部署在多个服务器上   1：分布式是指将不同的业务分布在不同的地方。 而集群指的是将几台服务器集中在一起，实现同一业务。分布式中的每一个节点，都可以做集群。 而集群并不一定就是分布式的。   举例：就比如新浪网，访问的人多了，他可以做一个群集，前面放一个响应服务器，后面几台服务器完成同一业务，如果有业务访问的时候，响应服务器看">
+<meta property="og:description" content="linux cmd 常用命令  释放内存 sudo sh -c &amp;quot;echo 3 &amp;gt; /proc/sys/vm/drop_caches&amp;quot;  查询当前文件夹空间大小 du -hsx * | sort -rh | head -10  内存/磁盘空间不足会导致bash tab无法补全 / pm2无法启动 / docker pull / docker start 无法成功执行 /">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2026-09-23T16:13:03.233Z">
+<meta property="og:updated_time" content="2026-09-23T16:13:03.232Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="分布式集群的理解">
-<meta name="twitter:description" content="分布式：一个业务分拆多个子业务，部署在不同的服务器上集群：同一个业务，部署在多个服务器上   1：分布式是指将不同的业务分布在不同的地方。 而集群指的是将几台服务器集中在一起，实现同一业务。分布式中的每一个节点，都可以做集群。 而集群并不一定就是分布式的。   举例：就比如新浪网，访问的人多了，他可以做一个群集，前面放一个响应服务器，后面几台服务器完成同一业务，如果有业务访问的时候，响应服务器看">
+<meta name="twitter:title" content="DrSG Harness Kit 设计与使用指南">
+<meta name="twitter:description" content="linux cmd 常用命令  释放内存 sudo sh -c &amp;quot;echo 3 &amp;gt; /proc/sys/vm/drop_caches&amp;quot;  查询当前文件夹空间大小 du -hsx * | sort -rh | head -10  内存/磁盘空间不足会导致bash tab无法补全 / pm2无法启动 / docker pull / docker start 无法成功执行 /">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -132,7 +132,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/AI-Agent/" style="font-size: 10px;">AI Agent</a> <a href="/tags/Claude-Code/" style="font-size: 10px;">Claude Code</a> <a href="/tags/Code-Graph/" style="font-size: 10px;">Code Graph</a> <a href="/tags/DrSG/" style="font-size: 10px;">DrSG</a> <a href="/tags/cmd/" style="font-size: 10px;">cmd</a> <a href="/tags/deploy/" style="font-size: 20px;">deploy</a> <a href="/tags/docker/" style="font-size: 10px;">docker</a> <a href="/tags/docker-compose/" style="font-size: 10px;">docker-compose</a> <a href="/tags/git/" style="font-size: 15px;">git</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/iaas/" style="font-size: 10px;">iaas</a> <a href="/tags/ipv6/" style="font-size: 10px;">ipv6</a> <a href="/tags/linode/" style="font-size: 10px;">linode</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/nginx/" style="font-size: 10px;">nginx</a> <a href="/tags/paas/" style="font-size: 10px;">paas</a> <a href="/tags/saas/" style="font-size: 10px;">saas</a> <a href="/tags/tmux/" style="font-size: 10px;">tmux</a> <a href="/tags/ubuntu/" style="font-size: 10px;">ubuntu</a> <a href="/tags/vpn/" style="font-size: 10px;">vpn</a> <a href="/tags/vps/" style="font-size: 10px;">vps</a> <a href="/tags/webpack/" style="font-size: 10px;">webpack</a> <a href="/tags/weichat/" style="font-size: 10px;">weichat</a> <a href="/tags/二进制格式/" style="font-size: 10px;">二进制格式</a> <a href="/tags/入门/" style="font-size: 10px;">入门</a> <a href="/tags/公众号/" style="font-size: 10px;">公众号</a> <a href="/tags/分布式/" style="font-size: 10px;">分布式</a> <a href="/tags/基础/" style="font-size: 10px;">基础</a> <a href="/tags/微信/" style="font-size: 10px;">微信</a> <a href="/tags/文本/" style="font-size: 10px;">文本</a> <a href="/tags/自动化部署/" style="font-size: 10px;">自动化部署</a> <a href="/tags/集群/" style="font-size: 10px;">集群</a>
+						<a href="/tags/AI-Agent/" style="font-size: 10px;">AI Agent</a> <a href="/tags/Claude-Code/" style="font-size: 10px;">Claude Code</a> <a href="/tags/Code-Graph/" style="font-size: 10px;">Code Graph</a> <a href="/tags/DrSG/" style="font-size: 10px;">DrSG</a> <a href="/tags/cmd/" style="font-size: 15px;">cmd</a> <a href="/tags/deploy/" style="font-size: 20px;">deploy</a> <a href="/tags/docker/" style="font-size: 10px;">docker</a> <a href="/tags/git/" style="font-size: 15px;">git</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/iaas/" style="font-size: 10px;">iaas</a> <a href="/tags/ipv6/" style="font-size: 10px;">ipv6</a> <a href="/tags/linode/" style="font-size: 10px;">linode</a> <a href="/tags/linux/" style="font-size: 15px;">linux</a> <a href="/tags/nginx/" style="font-size: 10px;">nginx</a> <a href="/tags/paas/" style="font-size: 10px;">paas</a> <a href="/tags/saas/" style="font-size: 10px;">saas</a> <a href="/tags/tmux/" style="font-size: 10px;">tmux</a> <a href="/tags/ubuntu/" style="font-size: 10px;">ubuntu</a> <a href="/tags/vpn/" style="font-size: 10px;">vpn</a> <a href="/tags/vps/" style="font-size: 10px;">vps</a> <a href="/tags/webpack/" style="font-size: 10px;">webpack</a> <a href="/tags/weichat/" style="font-size: 10px;">weichat</a> <a href="/tags/二进制格式/" style="font-size: 10px;">二进制格式</a> <a href="/tags/入门/" style="font-size: 10px;">入门</a> <a href="/tags/公众号/" style="font-size: 10px;">公众号</a> <a href="/tags/分布式/" style="font-size: 10px;">分布式</a> <a href="/tags/基础/" style="font-size: 10px;">基础</a> <a href="/tags/微信/" style="font-size: 10px;">微信</a> <a href="/tags/文本/" style="font-size: 10px;">文本</a> <a href="/tags/集群/" style="font-size: 10px;">集群</a>
 					</div>
 				</section>
 				
@@ -214,11 +214,11 @@
 	</div>
 </nav>
 
-      <div class="body-wrap"><article id="post-分布式集群的理解" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-linux-cmd" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/07/25/分布式集群的理解/" class="article-date">
-  	<time datetime="2016-07-25T22:37:00.000Z" itemprop="datePublished">2016-07-25</time>
+      <a href="/2026/09/23/linux-cmd/" class="article-date">
+  	<time datetime="2026-09-23T18:30:00.000Z" itemprop="datePublished">2026-09-23</time>
 </a>
     </div>
   
@@ -231,7 +231,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      分布式集群的理解
+      DrSG Harness Kit 设计与使用指南
     </h1>
   
 
@@ -240,7 +240,7 @@
       <div class="article-info article-info-post">
         
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/分布式/">分布式</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/集群/">集群</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cmd/">cmd</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li></ul>
 	</div>
 
         
@@ -252,18 +252,57 @@
     <div class="article-entry" itemprop="articleBody">
       
         <ul>
-<li>分布式：一个业务分拆多个子业务，部署在不同的服务器上集群：同一个业务，部署在多个服务器上 <blockquote>
+<li>linux cmd 常用命令<blockquote>
 <ul>
-<li>1：分布式是指将不同的业务分布在不同的地方。 而集群指的是将几台服务器集中在一起，实现同一业务。分布式中的每一个节点，都可以做集群。 而集群并不一定就是分布式的。 <blockquote>
+<li>释放内存 <code>sudo sh -c &quot;echo 3 &gt; /proc/sys/vm/drop_caches&quot;</code> </li>
+<li>查询当前文件夹空间大小 <code>du -hsx * | sort -rh | head -10</code> </li>
+<li>内存/磁盘空间不足会导致bash tab无法补全 / pm2无法启动 / docker pull / docker start 无法成功执行 / 程序崩溃退出 等问题 </li>
+<li>查看cpu占用 <code>top</code> </li>
+<li>查看内存占用 <code>free -m</code> </li>
+<li>源码安装的一些注意<blockquote>
 <ul>
-<li>举例：就比如新浪网，访问的人多了，他可以做一个群集，前面放一个响应服务器，后面几台服务器完成同一业务，如果有业务访问的时候，响应服务器看哪台服务器的负载不是很重，就将给哪一台去完成。而分布式，从窄意上理解，也跟集群差不多， 但是它的组织比较松散，不像集群，有一个组织性，一台服务器垮了，其它的服务器可以顶上来。分布式的每一个节点，都完成不同的业务，一个节点垮了，哪这个业务就不可访问了。</li>
+<li>./configure –prefix=/opt/apache是什么意思<blockquote>
+<ul>
+<li>这是按照路径的设置，./configure 会生成 makefile</li>
+<li>等 make 编译源代码生成相应的动态库或者可执行文件</li>
+<li>执行 make install 后，生成的动态库或者可执行文件就会拷贝到/opt/apache里面</li>
 </ul>
 </blockquote>
 </li>
-<li>2：简单说，分布式是以缩短单个任务的执行时间来提升效率的，而集群则是通过提高单位时间内执行的任务数来提升效率。 <blockquote>
-<p>-例如：<br>如果一个任务由10个子任务组成，每个子任务单独执行需1小时，则在一台服务器上执行该任务需10小时。采用分布式方案，提供10台服务器，每台服务器只负责处理一个子任务，不考虑子任务间的依赖关系，执行完这个任务只需一个小时。(这种工作模式的一个典型代表就是Hadoop的Map/Reduce分布式计算模型）;而采用集群方案，同样提供10台服务器，每台服务器都能独立处理这个任务。假设有10个任务同时到达，10个服务器将同时工作，1小时后，10个任务同时完成，这样，整身来看，还是1小时内完成一个任务！ </p>
+</ul>
 </blockquote>
 </li>
+</ul>
+</blockquote>
+</li>
+<li><code>chmod -R 754 ./</code> 4-read 2-write 1-ex</li>
+<li><code>ps -ef | grep docker</code> 查看进程</li>
+<li>修改用户密码 <code>passwd username</code> </li>
+<li>scp复制文件 <code>scp /home/daisy/full.tar.gz k@172.19.2.75:/home/k</code> 需要ssh服务 </li>
+<li>ubuntu 安装ssh服务 <blockquote>
+<ul>
+<li><code>sudo apt-get install openssh-server</code> <code>sudo service ssh start</code> </li>
+</ul>
+</blockquote>
+</li>
+<li>退出telnet<blockquote>
+<blockquote>
+<ul>
+<li><code>ctrl + c</code> or <code>ctrl + ]</code> 然后 <code>quit</code> </li>
+</ul>
+</blockquote>
+</blockquote>
+</li>
+<li>查看端口 tcp<blockquote>
+<ul>
+<li>netstat -anp | grep 5672</li>
+</ul>
+</blockquote>
+</li>
+<li>测试端口连通性(ubuntu)<blockquote>
+<ul>
+<li>tcp <code>telnet $IP $port</code> </li>
+<li>udp <code>nc -vzu $IP $port</code> -u代表udp协议 ，-v代表详细模式，-z代表只监测端口不发送数据; Connection to $IP $port port [udp/ntp] succeeded! ; 没有回显代表不连通 </li>
 </ul>
 </blockquote>
 </li>
@@ -277,18 +316,9 @@
     
 <nav id="article-nav">
   
-    <a href="/2016/10/03/docker-compose/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          docker-compose
-        
-      </div>
-    </a>
   
-  
-    <a href="/2016/07/23/tmux-learn/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">tmux-learn</div>
+    <a href="/2026/09/23/drsg-harness-kit/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">DrSG Harness Kit 设计与使用指南</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -323,7 +353,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="分布式集群的理解" data-title="分布式集群的理解" data-url="http://yoursite.com/2016/07/25/分布式集群的理解/"></div>
+	<div class="ds-thread" data-thread-key="linux-cmd" data-title="DrSG Harness Kit 设计与使用指南" data-url="http://yoursite.com/2026/09/23/linux-cmd/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
