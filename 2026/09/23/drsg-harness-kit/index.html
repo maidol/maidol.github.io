@@ -19,7 +19,7 @@
 <meta property="og:image" content="http://yoursite.com/images/drsg-harness-kit/codegraph-router-architecture.svg">
 <meta property="og:image" content="http://yoursite.com/images/drsg-harness-kit/memory-sharing-flow.svg">
 <meta property="og:image" content="http://yoursite.com/images/drsg-harness-kit/memory-sharing-architecture.svg">
-<meta property="og:updated_time" content="2026-09-24T16:07:01.154Z">
+<meta property="og:updated_time" content="2026-09-24T17:26:33.493Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="DrSG Harness Kit 设计与使用指南">
 <meta name="twitter:description" content="在将大语言模型（LLM）引入复杂工程实践的过程中，几乎所有开发者都会遇到两大核心瓶颈：智能体上下文记忆的断裂以及对大型代码库结构理解的粗糙与失真。 面对数百个源文件和复杂的依赖网络，基于纯文本匹配（grep / rg）的搜索方式不仅容易产生大量误报，更无法回答「改动这个函数会影响哪些调用方」、「类型依赖如何逐级传递」等深度问题。与此同时，随着会话被压缩（compact）或结束，智能体上一轮踩坑沉淀">
@@ -265,6 +265,7 @@
 <p>面对数百个源文件和复杂的依赖网络，基于纯文本匹配（<code>grep</code> / <code>rg</code>）的搜索方式不仅容易产生大量误报，更无法回答「改动这个函数会影响哪些调用方」、「类型依赖如何逐级传递」等深度问题。与此同时，随着会话被压缩（compact）或结束，智能体上一轮踩坑沉淀下来的关键结论往往随之蒸发，导致跨会话甚至跨项目的经验无法流转。</p>
 <p><strong>DrSG Harness Kit</strong> 正是为此而生的智能体侧基础设施工具套件。它为以 Claude Code 为代表的智能体提供了集中式支撑：<strong>为每个代码仓库提供精准的增量代码图（Code Plane），并为多智能体环境提供全局共享的长期记忆层（Memory Plane）</strong>。</p>
 <p>本文将全面拆解 DrSG Harness Kit 的双平面架构设计、工作机制、核心动词规范以及在生产环境中的实战部署与使用方法。</p>
+<p>项目仓库：<a href="https://github.com/maidol/drsg-harness-kit" target="_blank" rel="noopener">maidol/drsg-harness-kit</a></p>
 <hr>
 <h2 id="一、双平面架构设计与核心原理"><a href="#一、双平面架构设计与核心原理" class="headerlink" title="一、双平面架构设计与核心原理"></a>一、双平面架构设计与核心原理</h2><p>DrSG Harness Kit 最核心的架构特征在于<strong>「代码图」与「记忆层」的双平面彻底隔离与拓扑正交</strong>。</p>
 <p><img src="/images/drsg-harness-kit/daemon-topology.svg" alt="一台机器上的部署拓扑：记忆层一个全局 daemon，代码图每仓一个"></p>
@@ -443,7 +444,7 @@
 <nav id="article-nav">
   
   
-    <a href="/2026/09/23/文本与二进制格式/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2017/08/19/文本与二进制格式/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title">文本与二进制格式</div>
       <strong class="article-nav-caption">></strong>
     </a>

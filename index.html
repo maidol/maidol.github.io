@@ -241,6 +241,7 @@
 <p>面对数百个源文件和复杂的依赖网络，基于纯文本匹配（<code>grep</code> / <code>rg</code>）的搜索方式不仅容易产生大量误报，更无法回答「改动这个函数会影响哪些调用方」、「类型依赖如何逐级传递」等深度问题。与此同时，随着会话被压缩（compact）或结束，智能体上一轮踩坑沉淀下来的关键结论往往随之蒸发，导致跨会话甚至跨项目的经验无法流转。</p>
 <p><strong>DrSG Harness Kit</strong> 正是为此而生的智能体侧基础设施工具套件。它为以 Claude Code 为代表的智能体提供了集中式支撑：<strong>为每个代码仓库提供精准的增量代码图（Code Plane），并为多智能体环境提供全局共享的长期记忆层（Memory Plane）</strong>。</p>
 <p>本文将全面拆解 DrSG Harness Kit 的双平面架构设计、工作机制、核心动词规范以及在生产环境中的实战部署与使用方法。</p>
+<p>项目仓库：<a href="https://github.com/maidol/drsg-harness-kit" target="_blank" rel="noopener">maidol/drsg-harness-kit</a></p>
 <hr>
 <h2 id="一、双平面架构设计与核心原理"><a href="#一、双平面架构设计与核心原理" class="headerlink" title="一、双平面架构设计与核心原理"></a>一、双平面架构设计与核心原理</h2><p>DrSG Harness Kit 最核心的架构特征在于<strong>「代码图」与「记忆层」的双平面彻底隔离与拓扑正交</strong>。</p>
 <p><img src="/images/drsg-harness-kit/daemon-topology.svg" alt="一台机器上的部署拓扑：记忆层一个全局 daemon，代码图每仓一个"></p>
@@ -446,8 +447,8 @@
     <article id="post-文本与二进制格式" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2026/09/23/文本与二进制格式/" class="article-date">
-  	<time datetime="2026-09-23T16:13:03.233Z" itemprop="datePublished">2026-09-23</time>
+      <a href="/2017/08/19/文本与二进制格式/" class="article-date">
+  	<time datetime="2017-08-19T22:37:00.000Z" itemprop="datePublished">2017-08-19</time>
 </a>
     </div>
   
@@ -460,7 +461,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2026/09/23/文本与二进制格式/">文本与二进制格式</a>
+      <a class="article-title" href="/2017/08/19/文本与二进制格式/">文本与二进制格式</a>
     </h1>
   
 
@@ -488,67 +489,6 @@
 		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/二进制格式/">二进制格式</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/文本/">文本</a></li></ul>
 	</div>
 
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2026/09/23/hello-world/" class="article-date">
-  	<time datetime="2026-09-23T16:13:03.231Z" itemprop="datePublished">2026-09-23</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2026/09/23/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
       
 
       
@@ -1188,6 +1128,118 @@
       
 	<div class="article-tag tagcloud">
 		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/weichat/">weichat</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/公众号/">公众号</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/微信/">微信</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-linux-cmd" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/07/11/linux-cmd/" class="article-date">
+  	<time datetime="2016-07-11T22:37:00.000Z" itemprop="datePublished">2016-07-11</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/07/11/linux-cmd/">linux-cmd</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ul>
+<li>linux cmd 常用命令<blockquote>
+<ul>
+<li>释放内存 <code>sudo sh -c &quot;echo 3 &gt; /proc/sys/vm/drop_caches&quot;</code> </li>
+<li>查询当前文件夹空间大小 <code>du -hsx * | sort -rh | head -10</code> </li>
+<li>内存/磁盘空间不足会导致bash tab无法补全 / pm2无法启动 / docker pull / docker start 无法成功执行 / 程序崩溃退出 等问题 </li>
+<li>查看cpu占用 <code>top</code> </li>
+<li>查看内存占用 <code>free -m</code> </li>
+<li>源码安装的一些注意<blockquote>
+<ul>
+<li>./configure –prefix=/opt/apache是什么意思<blockquote>
+<ul>
+<li>这是按照路径的设置，./configure 会生成 makefile</li>
+<li>等 make 编译源代码生成相应的动态库或者可执行文件</li>
+<li>执行 make install 后，生成的动态库或者可执行文件就会拷贝到/opt/apache里面</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+</blockquote>
+</li>
+<li><code>chmod -R 754 ./</code> 4-read 2-write 1-ex</li>
+<li><code>ps -ef | grep docker</code> 查看进程</li>
+<li>修改用户密码 <code>passwd username</code> </li>
+<li>scp复制文件 <code>scp /home/daisy/full.tar.gz k@172.19.2.75:/home/k</code> 需要ssh服务 </li>
+<li>ubuntu 安装ssh服务 <blockquote>
+<ul>
+<li><code>sudo apt-get install openssh-server</code> <code>sudo service ssh start</code> </li>
+</ul>
+</blockquote>
+</li>
+<li>退出telnet<blockquote>
+<blockquote>
+<ul>
+<li><code>ctrl + c</code> or <code>ctrl + ]</code> 然后 <code>quit</code> </li>
+</ul>
+</blockquote>
+</blockquote>
+</li>
+<li>查看端口 tcp<blockquote>
+<ul>
+<li>netstat -anp | grep 5672</li>
+</ul>
+</blockquote>
+</li>
+<li>测试端口连通性(ubuntu)<blockquote>
+<ul>
+<li>tcp <code>telnet $IP $port</code> </li>
+<li>udp <code>nc -vzu $IP $port</code> -u代表udp协议 ，-v代表详细模式，-z代表只监测端口不发送数据; Connection to $IP $port port [udp/ntp] succeeded! ; 没有回显代表不连通 </li>
+</ul>
+</blockquote>
+</li>
+</ul>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cmd/">cmd</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li></ul>
 	</div>
 
       
