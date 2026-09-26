@@ -4,20 +4,20 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>docker-compose | Hexo</title>
+  <title>docker-compose 安装与使用 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="安装docker-compose与使用 参考1参考2参考3  sudo -i 进入root用户 安装: curl -L https://github.com/docker/compose/releases/download/1.8.0/docker-compose-uname -s-uname -m&amp;gt; /usr/local/bin/docker-compose  修改权限: chmod +">
+  <meta name="description" content="用 docker-compose 通过一个 YAML 文件一键启动 MySQL、MongoDB、Redis、RabbitMQ 等开发环境依赖。">
 <meta name="keywords" content="docker-compose,自动化部署">
 <meta property="og:type" content="article">
-<meta property="og:title" content="docker-compose">
+<meta property="og:title" content="docker-compose 安装与使用">
 <meta property="og:url" content="http://yoursite.com/2016/10/03/docker-compose/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="安装docker-compose与使用 参考1参考2参考3  sudo -i 进入root用户 安装: curl -L https://github.com/docker/compose/releases/download/1.8.0/docker-compose-uname -s-uname -m&amp;gt; /usr/local/bin/docker-compose  修改权限: chmod +">
+<meta property="og:description" content="用 docker-compose 通过一个 YAML 文件一键启动 MySQL、MongoDB、Redis、RabbitMQ 等开发环境依赖。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2026-09-23T16:13:03.231Z">
+<meta property="og:updated_time" content="2026-09-26T15:32:25.576Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="docker-compose">
-<meta name="twitter:description" content="安装docker-compose与使用 参考1参考2参考3  sudo -i 进入root用户 安装: curl -L https://github.com/docker/compose/releases/download/1.8.0/docker-compose-uname -s-uname -m&amp;gt; /usr/local/bin/docker-compose  修改权限: chmod +">
+<meta name="twitter:title" content="docker-compose 安装与使用">
+<meta name="twitter:description" content="用 docker-compose 通过一个 YAML 文件一键启动 MySQL、MongoDB、Redis、RabbitMQ 等开发环境依赖。">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -130,7 +130,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/AI-Agent/" style="font-size: 10px;">AI Agent</a> <a href="/tags/Claude-Code/" style="font-size: 10px;">Claude Code</a> <a href="/tags/Code-Graph/" style="font-size: 10px;">Code Graph</a> <a href="/tags/DrSG/" style="font-size: 10px;">DrSG</a> <a href="/tags/cmd/" style="font-size: 10px;">cmd</a> <a href="/tags/deploy/" style="font-size: 20px;">deploy</a> <a href="/tags/docker/" style="font-size: 10px;">docker</a> <a href="/tags/docker-compose/" style="font-size: 10px;">docker-compose</a> <a href="/tags/git/" style="font-size: 15px;">git</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/iaas/" style="font-size: 10px;">iaas</a> <a href="/tags/ipv6/" style="font-size: 10px;">ipv6</a> <a href="/tags/linode/" style="font-size: 10px;">linode</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/nginx/" style="font-size: 10px;">nginx</a> <a href="/tags/paas/" style="font-size: 10px;">paas</a> <a href="/tags/saas/" style="font-size: 10px;">saas</a> <a href="/tags/tmux/" style="font-size: 10px;">tmux</a> <a href="/tags/ubuntu/" style="font-size: 10px;">ubuntu</a> <a href="/tags/vpn/" style="font-size: 10px;">vpn</a> <a href="/tags/vps/" style="font-size: 10px;">vps</a> <a href="/tags/webpack/" style="font-size: 10px;">webpack</a> <a href="/tags/weichat/" style="font-size: 10px;">weichat</a> <a href="/tags/二进制格式/" style="font-size: 10px;">二进制格式</a> <a href="/tags/入门/" style="font-size: 10px;">入门</a> <a href="/tags/公众号/" style="font-size: 10px;">公众号</a> <a href="/tags/分布式/" style="font-size: 10px;">分布式</a> <a href="/tags/基础/" style="font-size: 10px;">基础</a> <a href="/tags/微信/" style="font-size: 10px;">微信</a> <a href="/tags/文本/" style="font-size: 10px;">文本</a> <a href="/tags/自动化部署/" style="font-size: 10px;">自动化部署</a> <a href="/tags/集群/" style="font-size: 10px;">集群</a>
+						<a href="/tags/AI-Agent/" style="font-size: 10px;">AI Agent</a> <a href="/tags/Claude-Code/" style="font-size: 10px;">Claude Code</a> <a href="/tags/Code-Graph/" style="font-size: 10px;">Code Graph</a> <a href="/tags/DrSG/" style="font-size: 10px;">DrSG</a> <a href="/tags/cmd/" style="font-size: 10px;">cmd</a> <a href="/tags/deploy/" style="font-size: 20px;">deploy</a> <a href="/tags/docker/" style="font-size: 15px;">docker</a> <a href="/tags/docker-compose/" style="font-size: 10px;">docker-compose</a> <a href="/tags/git/" style="font-size: 15px;">git</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/iaas/" style="font-size: 10px;">iaas</a> <a href="/tags/ipv6/" style="font-size: 10px;">ipv6</a> <a href="/tags/licode/" style="font-size: 10px;">licode</a> <a href="/tags/linode/" style="font-size: 10px;">linode</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/nginx/" style="font-size: 10px;">nginx</a> <a href="/tags/paas/" style="font-size: 10px;">paas</a> <a href="/tags/saas/" style="font-size: 10px;">saas</a> <a href="/tags/tmux/" style="font-size: 15px;">tmux</a> <a href="/tags/ubuntu/" style="font-size: 10px;">ubuntu</a> <a href="/tags/vpn/" style="font-size: 10px;">vpn</a> <a href="/tags/vps/" style="font-size: 10px;">vps</a> <a href="/tags/webpack/" style="font-size: 10px;">webpack</a> <a href="/tags/weichat/" style="font-size: 10px;">weichat</a> <a href="/tags/二进制格式/" style="font-size: 10px;">二进制格式</a> <a href="/tags/入门/" style="font-size: 10px;">入门</a> <a href="/tags/公众号/" style="font-size: 10px;">公众号</a> <a href="/tags/分布式/" style="font-size: 10px;">分布式</a> <a href="/tags/基础/" style="font-size: 10px;">基础</a> <a href="/tags/微信/" style="font-size: 10px;">微信</a> <a href="/tags/文本/" style="font-size: 10px;">文本</a> <a href="/tags/权限设计/" style="font-size: 10px;">权限设计</a> <a href="/tags/笔记/" style="font-size: 10px;">笔记</a> <a href="/tags/自动化部署/" style="font-size: 10px;">自动化部署</a> <a href="/tags/集群/" style="font-size: 10px;">集群</a>
 					</div>
 				</section>
 				
@@ -227,7 +227,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      docker-compose
+      docker-compose 安装与使用
     </h1>
   
 
@@ -240,6 +240,10 @@
 	</div>
 
         
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/Docker/">Docker</a>
+	</div>
+
 
         <div class="clearfix"></div>
       </div>
@@ -247,30 +251,62 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <ul>
-<li>安装docker-compose与使用 <a href="http://blog.csdn.net/lincyang/article/details/44588397" target="_blank" rel="noopener">参考1</a><a href="https://docs.docker.com/compose/install/" target="_blank" rel="noopener">参考2</a><a href="https://docs.docker.com/compose/compose-file/" target="_blank" rel="noopener">参考3</a><blockquote>
+        <p>用 docker-compose 通过一个 YAML 文件一键启动 MySQL、MongoDB、Redis、RabbitMQ 等开发环境依赖。</p>
+<a id="more"></a>
+<p>参考资料：</p>
 <ul>
-<li><code>sudo -i</code> 进入root用户</li>
-<li>安装: <code>curl -L https://github.com/docker/compose/releases/download/1.8.0/docker-compose-</code>uname -s<code>-</code>uname -m<code>&gt; /usr/local/bin/docker-compose</code> </li>
-<li>修改权限: <code>chmod +x /usr/local/bin/docker-compose</code> , 退出root <code>exit</code> </li>
-<li>如果以上两条命令安装不了, 则尝试 install as a container<blockquote>
-<ul>
-<li><code>curl -L https://github.com/docker/compose/releases/download/1.8.0/run.sh &gt; /usr/local/bin/docker-compose</code> <code>chmod +x /usr/local/bin/docker-compose</code> </li>
-</ul>
-</blockquote>
-</li>
-<li>为bash/zsh shell 配置命令 <a href="https://docs.docker.com/compose/completion/" target="_blank" rel="noopener">参考</a> </li>
-<li><a href="https://docs.docker.com/compose/django/" target="_blank" rel="noopener">使用例子-Django</a> </li>
-<li>启动: <code>docker-compose -f xxx.yml up -d</code>, -f 指定yml文件, -d 后台运行 <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># xxx.yml </span></span><br><span class="line"><span class="attr">mysql:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">"mysql"</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">        <span class="bullet">-</span> <span class="string">"3306:3306"</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">        <span class="bullet">-</span> <span class="string">./data:/var/lib/mysql</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">        <span class="bullet">-</span> <span class="string">MYSQL_ROOT_PASSWORD=xxx</span></span><br><span class="line"><span class="attr">mongodb:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">"mongo"</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">        <span class="bullet">-</span> <span class="string">"27017:27017"</span></span><br><span class="line"><span class="attr">redis:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">"redis"</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">        <span class="bullet">-</span> <span class="string">"6379:6379"</span></span><br><span class="line"><span class="attr">rabbitmq:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">"rabbitmq:3-management"</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">        <span class="bullet">-</span> <span class="string">"15672:15672"</span></span><br><span class="line">        <span class="bullet">-</span> <span class="string">"5672:5672"</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">        <span class="bullet">-</span> <span class="string">RABBITMQ_DEFAULT_USER=xxx</span></span><br><span class="line">        <span class="bullet">-</span> <span class="string">RABBITMQ_DEFAULT_PASS=xxx</span></span><br><span class="line">        <span class="bullet">-</span> <span class="string">RABBITMQ_DEFAULT_VHOST=xxx</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</blockquote>
-</li>
+<li><a href="https://docs.docker.com/compose/install/" target="_blank" rel="noopener">Docker Compose 安装</a></li>
+<li><a href="https://docs.docker.com/compose/compose-file/" target="_blank" rel="noopener">Compose 文件格式</a></li>
+<li><a href="https://docs.docker.com/compose/completion/" target="_blank" rel="noopener">命令行补全</a></li>
+<li><a href="https://docs.docker.com/compose/django/" target="_blank" rel="noopener">使用示例：Django</a></li>
+<li><a href="http://blog.csdn.net/lincyang/article/details/44588397" target="_blank" rel="noopener">docker-compose 入门（CSDN）</a></li>
 </ul>
 <blockquote>
-<ul>
-<li>停止: <code>docker-compose -f xxx.yml down</code> </li>
-</ul>
+<p><strong>时效说明</strong>：本文写于 2016 年，使用的是独立的 docker-compose 1.8.0。现在的 Compose V2 以 Docker CLI 插件的形式提供，命令是 <code>docker compose</code>（中间是空格，不再有连字符）。Docker Desktop 自带；在 Linux 上可以通过 <code>docker-compose-plugin</code> 包安装。</p>
+</blockquote>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>下载二进制文件到 <code>/usr/local/bin</code>（需要 root 权限）：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sudo -i   <span class="comment"># 切换到 root 用户</span></span><br><span class="line">curl -L <span class="string">"https://github.com/docker/compose/releases/download/1.8.0/docker-compose-<span class="variable">$(uname -s)</span>-<span class="variable">$(uname -m)</span>"</span> \</span><br><span class="line">  -o /usr/<span class="built_in">local</span>/bin/docker-compose</span><br><span class="line">chmod +x /usr/<span class="built_in">local</span>/bin/docker-compose</span><br><span class="line"><span class="built_in">exit</span>      <span class="comment"># 退出 root</span></span><br></pre></td></tr></table></figure>
+<p>如果上面的方式装不上，可以改为以容器方式运行 compose：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">curl -L https://github.com/docker/compose/releases/download/1.8.0/run.sh &gt; /usr/<span class="built_in">local</span>/bin/docker-compose</span><br><span class="line">chmod +x /usr/<span class="built_in">local</span>/bin/docker-compose</span><br></pre></td></tr></table></figure>
+<p>验证：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker-compose version</span><br></pre></td></tr></table></figure>
+<h2 id="编写-compose-文件"><a href="#编写-compose-文件" class="headerlink" title="编写 compose 文件"></a>编写 compose 文件</h2><p>下面的 <code>xxx.yml</code> 定义了常用的几个服务（Compose 文件格式 v2）：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">version:</span> <span class="string">"2"</span></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line">  <span class="attr">mysql:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">"mysql"</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">"3306:3306"</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">./data:/var/lib/mysql</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">MYSQL_ROOT_PASSWORD=xxx</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">mongodb:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">"mongo"</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">"27017:27017"</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">redis:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">"redis"</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">"6379:6379"</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">rabbitmq:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">"rabbitmq:3-management"</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">"15672:15672"</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">"5672:5672"</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">RABBITMQ_DEFAULT_USER=xxx</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">RABBITMQ_DEFAULT_PASS=xxx</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">RABBITMQ_DEFAULT_VHOST=xxx</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>2016 年原文使用的是不带 <code>version</code> / <code>services</code> 的 v1 格式（服务直接写在顶层）。v1 格式已经废弃，不建议再使用。另外，在当前的 Compose 规范中顶层的 <code>version</code> 字段也已过时，Compose V2 会忽略它并给出警告，新写的文件可以直接从 <code>services:</code> 开始。</p>
+</blockquote>
+<h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>docker-compose -f xxx.yml up -d</code></td>
+<td>启动所有服务。<code>-f</code> 指定 yml 文件，<code>-d</code> 后台运行</td>
+</tr>
+<tr>
+<td><code>docker-compose -f xxx.yml ps</code></td>
+<td>查看服务状态</td>
+</tr>
+<tr>
+<td><code>docker-compose -f xxx.yml logs -f</code></td>
+<td>查看日志</td>
+</tr>
+<tr>
+<td><code>docker-compose -f xxx.yml stop</code></td>
+<td>停止服务，保留容器</td>
+</tr>
+<tr>
+<td><code>docker-compose -f xxx.yml down</code></td>
+<td>停止并<strong>删除</strong>容器和网络</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>文件名为默认的 <code>docker-compose.yml</code> 时，可以省略 <code>-f</code> 参数。</p>
 </blockquote>
 
       
@@ -291,8 +327,8 @@
     </a>
   
   
-    <a href="/2016/07/25/分布式集群的理解/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">分布式集群的理解</div>
+    <a href="/2016/08/19/文本与二进制格式/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">文本与二进制格式</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -327,7 +363,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="docker-compose" data-title="docker-compose" data-url="http://yoursite.com/2016/10/03/docker-compose/"></div>
+	<div class="ds-thread" data-thread-key="docker-compose" data-title="docker-compose 安装与使用" data-url="http://yoursite.com/2016/10/03/docker-compose/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">

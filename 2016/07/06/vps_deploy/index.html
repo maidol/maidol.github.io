@@ -4,20 +4,20 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>vps-deploy | Hexo</title>
+  <title>VPS 部署笔记 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="ubuntu下的操作  创建普通用户, 之后所有的操作使用新用户登录进行  adduser kmaidol 创建用户kmaidol 设置sodu权限  apt-get install vim chmod 744 /etc/sudoers 获取写权限 vim /etc/sudoers 编辑如下, 获得sudo权限-# User privilege specification-root ALL=(A">
+  <meta name="description" content="在一台全新的 Ubuntu VPS 上从零搭建环境的完整记录：用户与安全、时区、Node.js、shadowsocks、MongoDB、Nginx、MySQL、Redis、Hexo、RabbitMQ、SSH 免密登录等。">
 <meta name="keywords" content="vps,linode,vpn,nginx">
 <meta property="og:type" content="article">
-<meta property="og:title" content="vps-deploy">
+<meta property="og:title" content="VPS 部署笔记">
 <meta property="og:url" content="http://yoursite.com/2016/07/06/vps_deploy/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="ubuntu下的操作  创建普通用户, 之后所有的操作使用新用户登录进行  adduser kmaidol 创建用户kmaidol 设置sodu权限  apt-get install vim chmod 744 /etc/sudoers 获取写权限 vim /etc/sudoers 编辑如下, 获得sudo权限-# User privilege specification-root ALL=(A">
+<meta property="og:description" content="在一台全新的 Ubuntu VPS 上从零搭建环境的完整记录：用户与安全、时区、Node.js、shadowsocks、MongoDB、Nginx、MySQL、Redis、Hexo、RabbitMQ、SSH 免密登录等。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2026-09-23T16:13:03.233Z">
+<meta property="og:updated_time" content="2026-09-26T15:32:25.581Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="vps-deploy">
-<meta name="twitter:description" content="ubuntu下的操作  创建普通用户, 之后所有的操作使用新用户登录进行  adduser kmaidol 创建用户kmaidol 设置sodu权限  apt-get install vim chmod 744 /etc/sudoers 获取写权限 vim /etc/sudoers 编辑如下, 获得sudo权限-# User privilege specification-root ALL=(A">
+<meta name="twitter:title" content="VPS 部署笔记">
+<meta name="twitter:description" content="在一台全新的 Ubuntu VPS 上从零搭建环境的完整记录：用户与安全、时区、Node.js、shadowsocks、MongoDB、Nginx、MySQL、Redis、Hexo、RabbitMQ、SSH 免密登录等。">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -130,7 +130,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/AI-Agent/" style="font-size: 10px;">AI Agent</a> <a href="/tags/Claude-Code/" style="font-size: 10px;">Claude Code</a> <a href="/tags/Code-Graph/" style="font-size: 10px;">Code Graph</a> <a href="/tags/DrSG/" style="font-size: 10px;">DrSG</a> <a href="/tags/cmd/" style="font-size: 10px;">cmd</a> <a href="/tags/deploy/" style="font-size: 20px;">deploy</a> <a href="/tags/docker/" style="font-size: 10px;">docker</a> <a href="/tags/docker-compose/" style="font-size: 10px;">docker-compose</a> <a href="/tags/git/" style="font-size: 15px;">git</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/iaas/" style="font-size: 10px;">iaas</a> <a href="/tags/ipv6/" style="font-size: 10px;">ipv6</a> <a href="/tags/linode/" style="font-size: 10px;">linode</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/nginx/" style="font-size: 10px;">nginx</a> <a href="/tags/paas/" style="font-size: 10px;">paas</a> <a href="/tags/saas/" style="font-size: 10px;">saas</a> <a href="/tags/tmux/" style="font-size: 10px;">tmux</a> <a href="/tags/ubuntu/" style="font-size: 10px;">ubuntu</a> <a href="/tags/vpn/" style="font-size: 10px;">vpn</a> <a href="/tags/vps/" style="font-size: 10px;">vps</a> <a href="/tags/webpack/" style="font-size: 10px;">webpack</a> <a href="/tags/weichat/" style="font-size: 10px;">weichat</a> <a href="/tags/二进制格式/" style="font-size: 10px;">二进制格式</a> <a href="/tags/入门/" style="font-size: 10px;">入门</a> <a href="/tags/公众号/" style="font-size: 10px;">公众号</a> <a href="/tags/分布式/" style="font-size: 10px;">分布式</a> <a href="/tags/基础/" style="font-size: 10px;">基础</a> <a href="/tags/微信/" style="font-size: 10px;">微信</a> <a href="/tags/文本/" style="font-size: 10px;">文本</a> <a href="/tags/自动化部署/" style="font-size: 10px;">自动化部署</a> <a href="/tags/集群/" style="font-size: 10px;">集群</a>
+						<a href="/tags/AI-Agent/" style="font-size: 10px;">AI Agent</a> <a href="/tags/Claude-Code/" style="font-size: 10px;">Claude Code</a> <a href="/tags/Code-Graph/" style="font-size: 10px;">Code Graph</a> <a href="/tags/DrSG/" style="font-size: 10px;">DrSG</a> <a href="/tags/cmd/" style="font-size: 10px;">cmd</a> <a href="/tags/deploy/" style="font-size: 20px;">deploy</a> <a href="/tags/docker/" style="font-size: 15px;">docker</a> <a href="/tags/docker-compose/" style="font-size: 10px;">docker-compose</a> <a href="/tags/git/" style="font-size: 15px;">git</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/iaas/" style="font-size: 10px;">iaas</a> <a href="/tags/ipv6/" style="font-size: 10px;">ipv6</a> <a href="/tags/licode/" style="font-size: 10px;">licode</a> <a href="/tags/linode/" style="font-size: 10px;">linode</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/nginx/" style="font-size: 10px;">nginx</a> <a href="/tags/paas/" style="font-size: 10px;">paas</a> <a href="/tags/saas/" style="font-size: 10px;">saas</a> <a href="/tags/tmux/" style="font-size: 15px;">tmux</a> <a href="/tags/ubuntu/" style="font-size: 10px;">ubuntu</a> <a href="/tags/vpn/" style="font-size: 10px;">vpn</a> <a href="/tags/vps/" style="font-size: 10px;">vps</a> <a href="/tags/webpack/" style="font-size: 10px;">webpack</a> <a href="/tags/weichat/" style="font-size: 10px;">weichat</a> <a href="/tags/二进制格式/" style="font-size: 10px;">二进制格式</a> <a href="/tags/入门/" style="font-size: 10px;">入门</a> <a href="/tags/公众号/" style="font-size: 10px;">公众号</a> <a href="/tags/分布式/" style="font-size: 10px;">分布式</a> <a href="/tags/基础/" style="font-size: 10px;">基础</a> <a href="/tags/微信/" style="font-size: 10px;">微信</a> <a href="/tags/文本/" style="font-size: 10px;">文本</a> <a href="/tags/权限设计/" style="font-size: 10px;">权限设计</a> <a href="/tags/笔记/" style="font-size: 10px;">笔记</a> <a href="/tags/自动化部署/" style="font-size: 10px;">自动化部署</a> <a href="/tags/集群/" style="font-size: 10px;">集群</a>
 					</div>
 				</section>
 				
@@ -227,7 +227,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      vps-deploy
+      VPS 部署笔记
     </h1>
   
 
@@ -240,6 +240,10 @@
 	</div>
 
         
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/Linux/">Linux</a>
+	</div>
+
 
         <div class="clearfix"></div>
       </div>
@@ -247,540 +251,279 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <ul>
-<li>ubuntu下的操作 </li>
-<li>创建普通用户, 之后所有的操作使用新用户登录进行<blockquote>
-<ul>
-<li><code>adduser kmaidol</code> 创建用户kmaidol</li>
-<li>设置sodu权限<blockquote>
-<ul>
-<li><code>apt-get install vim</code></li>
-<li><code>chmod 744 /etc/sudoers</code> 获取写权限</li>
-<li><code>vim /etc/sudoers</code> 编辑如下, 获得sudo权限<br>-# User privilege specification<br>-root ALL=(ALL) ALL<br>-kmaidol ALL=(ALL) ALL</li>
-<li>使用 kmaidol 登陆 or <code>su kmaidol</code>切换</li>
-<li>必须确保新增用户获取了sudo权限, 并且可以远程登陆之后, 才做以下的操作, 以下的操作必须由新增的用户进行操作, 取消root远程登录<blockquote>
-<ul>
-<li>下面还有一个问题，现在服务器开着root这个用户，远程可以通过root用户登录，这让人很不放心啊，所以得取消root远程登录</li>
-<li><code>sudo vim /etc/ssh/sshd_config</code> 修改PermitRootLogin 的值为 yes</li>
-<li>然后重启ssh <code>sudo service ssh restart</code> 再次尝试使用root登录，会发现登不上去了</li>
-</ul>
-</blockquote>
-</li>
-</ul>
-</blockquote>
-</li>
-</ul>
-</blockquote>
-</li>
-<li>设置时区<blockquote>
-<ul>
-<li><code>tzselect</code> 执行命令按提示操作</li>
-<li>设置localtime <code>sudo cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime</code></li>
-<li><code>date</code> 查看时间</li>
-<li>更多时区信息可以在以下目录中去选取：<code>cd /usr/share/zoneinfo/</code></li>
-<li>与时间服务器上的时间同步的方法<blockquote>
-<ul>
-<li>安装ntpdate工具 <code>sudo apt-get install ntpdate</code> </li>
-<li>同步 <code>sudo ntpdate cn.pool.ntp.org</code> </li>
-<li>将系统时间写入硬件时间 <code>hwclock --systohc</code> </li>
-</ul>
-</blockquote>
-</li>
-</ul>
-</blockquote>
-</li>
-<li>禁用ipv6<blockquote>
-<ul>
-<li><code>vim /etc/sysctl.conf</code></li>
-<li>添加内容, 如果是 OpenVZ 环境，请把最后一条的 eth0 改成 venet0 ，同理如果网卡是 eth1 或者其他的名字，也要相应修改。<br>net.ipv6.conf.all.disable_ipv6 = 1<br>net.ipv6.conf.default.disable_ipv6 = 1<br>net.ipv6.conf.lo.disable_ipv6 = 1<br>net.ipv6.conf.eth0.disable_ipv6 = 1</li>
-<li>执行 <code>sudo sysctl -p</code></li>
-<li><code>ifconfig</code> 查看</li>
-</ul>
-</blockquote>
-</li>
-<li>安装 nvm node<blockquote>
-<ul>
-<li>安装 curl <code>sudo apt-get install curl</code></li>
-<li><code>curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.0/install.sh | bash</code></li>
-<li>激活 nvm, 进入用户文件夹 /home/kmaidol, 执行 <code>. ~/.nvm/nvm.sh</code></li>
-<li>安装node <code>nvm install v6</code><blockquote>
-<ul>
-<li>登陆默认启动版本 <code>nvm alias default 0.10.x</code></li>
-</ul>
-</blockquote>
-</li>
-<li>安装nrm, 管理下载源  <code>npm install -g nrm</code>  命令 nrm ls/use/…</li>
-<li>安装bower  <code>npm install -g bower</code></li>
-<li>安装pm2  <code>npm install -g pm2</code></li>
-</ul>
-</blockquote>
-</li>
-<li>安装 git<blockquote>
-<ul>
-<li><code>sudo apt-get install git</code></li>
-</ul>
-</blockquote>
-</li>
-<li>源码安装shadowsocks 一次性验证<blockquote>
-<ul>
-<li><code>sudo apt-get update</code> <code>sudo apt-get install -y python python-setuptools</code></li>
-<li><code>git clone https://github.com/shadowsocks/shadowsocks.git</code></li>
-<li><code>cd ./shadowsocks</code></li>
-<li><code>git checkout master</code></li>
-<li><code>sudo python setup.py install</code></li>
-<li><code>ssserver -h</code></li>
-<li>添加一次性验证 运行ssserver 时增加参数 <code>-a</code>, 或者 ss.json 文件添加 <code>&#39;auth&#39;: true</code></li>
-<li>ss.json {<pre><code>   &quot;server&quot;: &quot;159.203.234.63&quot;,
-   &quot;port_password&quot;: {
-           &quot;10080&quot;:&quot;123456&quot;
-   },
-   &quot;timeout&quot;: 300,
-   &quot;method&quot;: &quot;aes-256-cfb&quot;
-}
-</code></pre></li>
-<li>启动shadowsocks <code>sudo ssserver --manager-address 127.0.0.1:6001 -c ss.json -d start</code>   -d 代表守护进程运行 , <code>sudo ssserver -d stop</code> </li>
-<li>sslocal是linux的shadowsocks客户端, 执行 <code>sslocal -h</code> 查看使用方法 </li>
-</ul>
-</blockquote>
-</li>
-<li>docker 部署shadowsocks<blockquote>
-<ul>
-<li><code>docker pull oddrationale/docker-shadowsocks</code> </li>
-<li>This image uses ENTRYPOINT to run the containers as an executable <code>docker run -d -p 1984:1984 oddrationale/docker-shadowsocks -s 0.0.0.0 -p 1984 -k $SSPASSWORD -m aes-256-cfb</code>  For more command line options, refer to the <a href="https://github.com/shadowsocks/shadowsocks" target="_blank" rel="noopener">shadowsocks documentation</a></li>
-</ul>
-</blockquote>
-</li>
-<li>安装mongodb<blockquote>
-<ul>
-<li><code>sudo apt-get install mongodb</code></li>
-<li>apt-get 安装后默认会作成服务 <code>/etc/init.d/mongodb</code> <code>sudo service mongodb restart/start/stop/status</code> </li>
-<li><code>mongod -h</code> 查看帮助,  mongod是服务程序, mongodb封装了mongod, 而mongo是客户端shell </li>
-<li>mongodb 实现远程连接<blockquote>
-<ul>
-<li>1,添加管理员账 <blockquote>
-<ul>
-<li><code>mongo</code> 本机登陆mongo</li>
-<li><blockquote>
-<p>use admin<br>switched to db admin<br>db.addUser(‘kmaidol’,’xxxxxx’)</p>
-</blockquote>
-</li>
-</ul>
-</blockquote>
-</li>
-<li><ol start="2">
-<li>配置/etc/mongodb.conf<blockquote>
-<ul>
-<li>#bind_ip = 127.0.0.1   //注释此行 </li>
-<li>auth = true       //将此行前的注释去掉</li>
-</ul>
-</blockquote>
-</li>
-</ol>
-</li>
-<li>3，重启mongodb<blockquote>
-<ul>
-<li><code>/etc/init.d/mongodb</code>  <code>sudo service mongodb restart</code>  </li>
-</ul>
-</blockquote>
-</li>
-<li><ol start="4">
-<li>防火墙开放27017端口<blockquote>
-<ul>
-<li><code>iptables -A INPUT -p tcp -m state --state NEW -m tcp --dport 27017 -j ACCEPT</code></li>
-</ul>
-</blockquote>
-</li>
-</ol>
-</li>
-<li>如果需要远程登陆指定的数据库, 需要在对应的数据库里创建用户(). 例如有数据库 test, 则<code>use test</code>, 再在test数据库创建用户 <code>db.addUser(&#39;kmaidol&#39;,&#39;xxxxxx&#39;)</code>, 之后就可以使用这个用户访问test</li>
-</ul>
-</blockquote>
-</li>
-</ul>
-</blockquote>
-</li>
-<li>安装tmux<blockquote>
-<ul>
-<li><code>apt-get install tmux</code></li>
-<li>新建会话 <code>tmux new -s @session</code></li>
-<li>进入已打开的会话 <code>tmux a -t @session</code></li>
-</ul>
-</blockquote>
-</li>
-<li>部署 shadowsocks-manager<blockquote>
-<ul>
-<li>获取源码 <code>git clone https://github.com/shadowsocks/shadowsocks-manager.git</code></li>
-<li>安装 <code>npm install -g bower</code> <code>cd shadowsocks-manager</code> <code>npm install</code> <code>bower install</code></li>
-<li><code>cd shadowsocks-manager</code> <code>mv config.js.sample config.js</code> <code>node server</code></li>
-</ul>
-</blockquote>
-</li>
-<li><p>安装nginx</p>
+        <p>在一台全新的 Ubuntu VPS 上从零搭建环境的完整记录：用户与安全、时区、Node.js、shadowsocks、MongoDB、Nginx、MySQL、Redis、Hexo、RabbitMQ、SSH 免密登录等。</p>
+<a id="more"></a>
 <blockquote>
-<ul>
-<li><code>sudo apt-get install nginx</code></li>
-<li>常用命令 启动<code>sudo nginx -c filename</code> 停止<code>sudo nginx -s stop/quit/</code> <code>pkill -9 nginx</code></li>
-<li>重载配置 <code>sudo nginx -s reload</code></li>
-<li>检查配置文件是否正确 <code>sudo nginx -t</code></li>
-<li>nginx 配置 (含ssl)<blockquote>
-<ul>
-<li>###<br>  worker_processes 1;<br>  events {<br>  }<br>  http {</li>
-</ul>
+<p><strong>说明</strong>：以下操作均在 Ubuntu 下进行，写于 2016 年。文中的软件版本（MySQL 5.7.13、Redis 3.2.1、RabbitMQ 3.6.3 等）都比较旧，实际安装时请替换为当前版本，并以官方文档为准。</p>
+<p>文中的 <code>your_server_ip</code>、<code>yourpassword</code>、<code>deploy</code>（用户名）、<code>example.com</code>（域名）等都是占位符，请替换成自己的值。</p>
 </blockquote>
-</li>
+<h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><ul>
+<li><a href="#1-创建普通用户并禁止-root-远程登录">1. 创建普通用户并禁止 root 远程登录</a></li>
+<li><a href="#2-设置时区与时间同步">2. 设置时区与时间同步</a></li>
+<li><a href="#3-禁用-IPv6">3. 禁用 IPv6</a></li>
+<li><a href="#4-安装-nvm-与-Node-js">4. 安装 nvm 与 Node.js</a></li>
+<li><a href="#5-安装-Git">5. 安装 Git</a></li>
+<li><a href="#6-shadowsocks">6. shadowsocks</a></li>
+<li><a href="#7-MongoDB">7. MongoDB</a></li>
+<li><a href="#8-tmux">8. tmux</a></li>
+<li><a href="#9-Nginx">9. Nginx</a></li>
+<li><a href="#10-MySQL（源码编译安装）">10. MySQL（源码编译安装）</a></li>
+<li><a href="#11-Redis（源码安装）">11. Redis（源码安装）</a></li>
+<li><a href="#12-Hexo">12. Hexo</a></li>
+<li><a href="#13-Cloud9-IDE">13. Cloud9 IDE</a></li>
+<li><a href="#14-RabbitMQ">14. RabbitMQ</a></li>
+<li><a href="#15-SSH-免密码登录">15. SSH 免密码登录</a></li>
+<li><a href="#16-流量监控">16. 流量监控</a></li>
 </ul>
+<h2 id="1-创建普通用户并禁止-root-远程登录"><a href="#1-创建普通用户并禁止-root-远程登录" class="headerlink" title="1. 创建普通用户并禁止 root 远程登录"></a>1. 创建普通用户并禁止 root 远程登录</h2><p>之后的所有操作都用新建的普通用户登录完成。</p>
+<h3 id="1-1-创建用户并授予-sudo-权限"><a href="#1-1-创建用户并授予-sudo-权限" class="headerlink" title="1.1 创建用户并授予 sudo 权限"></a>1.1 创建用户并授予 sudo 权限</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 创建用户 deploy</span></span><br><span class="line">adduser deploy</span><br><span class="line"></span><br><span class="line"><span class="comment"># 推荐做法：把用户加入 sudo 组</span></span><br><span class="line">usermod -aG sudo deploy</span><br></pre></td></tr></table></figure>
+<p>也可以直接编辑 sudoers 文件。<strong>务必使用 <code>visudo</code></strong>，它会在保存前检查语法，避免因为写错把自己锁在外面。不要用 <code>chmod</code> 修改 <code>/etc/sudoers</code> 的权限后再用 vim 编辑：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">visudo</span><br></pre></td></tr></table></figure>
+<p>在 <code>User privilege specification</code> 部分添加一行：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># User privilege specification</span><br><span class="line">root    ALL=(ALL:ALL) ALL</span><br><span class="line">deploy  ALL=(ALL:ALL) ALL</span><br></pre></td></tr></table></figure>
+<p>然后用 <code>deploy</code> 重新登录，或者执行 <code>su - deploy</code> 切换用户。</p>
+<h3 id="1-2-禁止-root-远程登录"><a href="#1-2-禁止-root-远程登录" class="headerlink" title="1.2 禁止 root 远程登录"></a>1.2 禁止 root 远程登录</h3><p>服务器开着 root 远程登录很不安全，应该关掉。</p>
+<blockquote>
+<p><strong>注意</strong>：必须先确认新用户已经拿到 sudo 权限，<strong>并且能够远程登录</strong>，再执行下面的操作。否则可能再也登录不上服务器。</p>
 </blockquote>
-<pre><code>#负责压缩数据流
-gzip              on;  
-gzip_min_length   1000;  
-gzip_types        text/plain text/css application/x-javascript;
-
-#设定负载均衡的服务器列表
-#weigth参数表示权值，权值越高被分配到的几率越大
-upstream shadowsocksManager{
-server localhost:6003; #shadowsocksManager     
-}
-# test #
-server {
-listen       80;
-server_name  v1.maidol.pw;
-location / {
-        proxy_pass   http://www.google.com;
-}
-}
-# maidol.pw #   
-server {
-#侦听的80端口
-listen       80;
-listen       443;
-server_name  maidol.pw;
-#启用SSL模块
-ssl on;
-#证书文件放置路径
-ssl_certificate /home/kmaidol/cert/1_maidol.pw_bundle.crt;
-#私钥文件放置路径
-ssl_certificate_key /home/kmaidol/cert/2_maidol.pw.key;
-
-location / {
-        proxy_pass   http://shadowsocksManager;    #在这里设置一个代理，和upstream的名字一样
-}
-}
-}
-</code></pre></li>
-<li>安装mysql(源码编译安装), 并设置远程登陆<blockquote>
-<ul>
-<li>安装环境准备 <blockquote>
-<ul>
-<li><code>sudo apt-get install build-essential libncurses5-dev cmake</code> </li>
-<li>创建mysql用户 并且禁止登录 <code>sudo groupadd mysql</code> <code>sudo useradd -s /sbin/nologin -g mysql mysql</code> <code>sudo mkdir -p /data/mysql/</code> <code>sudo mkdir -p /data/mysql/data/</code></li>
-</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /etc/ssh/sshd_config</span><br></pre></td></tr></table></figure>
+<p>把 <code>PermitRootLogin</code> 的值改为 <code>no</code>：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">PermitRootLogin no</span><br></pre></td></tr></table></figure>
+<p>重启 ssh 服务：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo service ssh restart</span><br></pre></td></tr></table></figure>
+<p>再用 root 登录，会发现已经登录不上了。</p>
+<h2 id="2-设置时区与时间同步"><a href="#2-设置时区与时间同步" class="headerlink" title="2. 设置时区与时间同步"></a>2. 设置时区与时间同步</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 交互式选择时区，按提示操作</span></span><br><span class="line">tzselect</span><br><span class="line"></span><br><span class="line"><span class="comment"># 设置本地时间为上海时区</span></span><br><span class="line">sudo cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime</span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看当前时间</span></span><br><span class="line">date</span><br></pre></td></tr></table></figure>
+<p>更多时区可以在 <code>/usr/share/zoneinfo/</code> 目录中选择。在 Ubuntu 16.04 及以上版本，推荐直接用 <code>sudo timedatectl set-timezone Asia/Shanghai</code>。</p>
+<p>与时间服务器同步：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install ntpdate</span><br><span class="line">sudo ntpdate cn.pool.ntp.org</span><br><span class="line"><span class="comment"># 把系统时间写入硬件时钟</span></span><br><span class="line">sudo hwclock --systohc</span><br></pre></td></tr></table></figure>
+<h2 id="3-禁用-IPv6"><a href="#3-禁用-IPv6" class="headerlink" title="3. 禁用 IPv6"></a>3. 禁用 IPv6</h2><p>参见 <a href="/2016/07/07/ubuntu-禁用ipv6/">Ubuntu 14.04 / Debian 7.8 禁用 IPv6 的设置方法</a>。</p>
+<h2 id="4-安装-nvm-与-Node-js"><a href="#4-安装-nvm-与-Node-js" class="headerlink" title="4. 安装 nvm 与 Node.js"></a>4. 安装 nvm 与 Node.js</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install curl</span><br><span class="line">curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.0/install.sh | bash</span><br><span class="line"></span><br><span class="line"><span class="comment"># 激活 nvm（安装脚本会自动写入 ~/.bashrc，重新登录后也会生效）</span></span><br><span class="line">. ~/.nvm/nvm.sh</span><br><span class="line"></span><br><span class="line"><span class="comment"># 安装 Node.js v6，并设为默认版本</span></span><br><span class="line">nvm install v6</span><br><span class="line">nvm <span class="built_in">alias</span> default v6</span><br></pre></td></tr></table></figure>
+<p>常用的全局工具：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm install -g nrm    <span class="comment"># 管理 npm 下载源：nrm ls / nrm use &lt;registry&gt;</span></span><br><span class="line">npm install -g bower  <span class="comment"># 前端包管理</span></span><br><span class="line">npm install -g pm2    <span class="comment"># Node 进程管理</span></span><br></pre></td></tr></table></figure>
+<h2 id="5-安装-Git"><a href="#5-安装-Git" class="headerlink" title="5. 安装 Git"></a>5. 安装 Git</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install git</span><br></pre></td></tr></table></figure>
+<h2 id="6-shadowsocks"><a href="#6-shadowsocks" class="headerlink" title="6. shadowsocks"></a>6. shadowsocks</h2><h3 id="6-1-源码安装（支持一次性验证-OTA）"><a href="#6-1-源码安装（支持一次性验证-OTA）" class="headerlink" title="6.1 源码安装（支持一次性验证 OTA）"></a>6.1 源码安装（支持一次性验证 OTA）</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install -y python python-setuptools</span><br><span class="line">git <span class="built_in">clone</span> https://github.com/shadowsocks/shadowsocks.git</span><br><span class="line"><span class="built_in">cd</span> shadowsocks</span><br><span class="line">git checkout master</span><br><span class="line">sudo python setup.py install</span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看帮助</span></span><br><span class="line">ssserver -h</span><br></pre></td></tr></table></figure>
+<p>开启一次性验证（OTA）有两种方式：运行 <code>ssserver</code> 时加上 <code>-a</code> 参数，或者在配置文件中加上 <code>&quot;one_time_auth&quot;: true</code>。</p>
+<p>配置文件 <code>ss.json</code> 示例：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"server"</span>: <span class="string">"your_server_ip"</span>,</span><br><span class="line">  <span class="attr">"port_password"</span>: &#123;</span><br><span class="line">    <span class="attr">"10080"</span>: <span class="string">"yourpassword"</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">"timeout"</span>: <span class="number">300</span>,</span><br><span class="line">  <span class="attr">"method"</span>: <span class="string">"aes-256-cfb"</span>,</span><br><span class="line">  <span class="attr">"one_time_auth"</span>: <span class="literal">true</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>启动与停止：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -d 表示以守护进程方式运行</span></span><br><span class="line">sudo ssserver --manager-address 127.0.0.1:6001 -c ss.json -d start</span><br><span class="line">sudo ssserver -d stop</span><br></pre></td></tr></table></figure>
+<p><code>sslocal</code> 是 Linux 下的 shadowsocks 客户端，用法可以通过 <code>sslocal -h</code> 查看。</p>
+<blockquote>
+<p>OTA 和 <code>aes-256-cfb</code> 这类流加密方式都已经被 shadowsocks 废弃，新部署建议使用 AEAD 加密方式（如 <code>chacha20-ietf-poly1305</code>）。</p>
 </blockquote>
-</li>
-<li>mysql5.7.5之后版本都要安装boost包。所以我选择是下载已经自带boost安装包的mysql安装包：</li>
-<li><code>cd /usr/local/src</code></li>
-<li><code>wget http://dev.mysql.com/get/Downloads/MySQL-5.7/mysql-boost-5.7.13.tar.gz</code></li>
-<li><code>tar zxvf mysql-boost-5.7.13.tar.gz</code> <code>cd mysql-5.7.13/</code></li>
-<li>网上某些教程多了这一句 <code>sh BUILD/autorun.sh</code>, 安装前不要执行, 否则会安装失败</li>
-<li>MySQL从5.5版本开始，通过./configure进行编译配置方式已经被取消，取而代之的是cmake工具 </li>
-<li>`cmake . -DCMAKE_INSTALL_PREFIX=/usr/local/mysql \<pre><code>-DSYSCONFDIR=/etc \
--DMYSQL_DATADIR=/data/mysql/data \
--DWITH_MYISAM_STORAGE_ENGINE=1 \
--DWITH_INNOBASE_STORAGE_ENGINE=1 \
--DWITH_PARTITION_STORAGE_ENGINE=1 \
--DWITH_FEDERATED_STORAGE_ENGINE=1 \
--DWITH_BLACKHOLE_STORAGE_ENGINE=1 \
--DEXTRA_CHARSETS=all \
--DDEFAULT_CHARSET=utf8mb4 \
--DDEFAULT_COLLATION=utf8mb4_general_ci \
--DWITH_EMBEDDED_SERVER=1 \
--DENABLED_LOCAL_INFILE=1 \
--DENABLE_DTRACE=0 \
--DWITH_BOOST=boost \
--DENABLE_DOWNLOADS=1`
-</code></pre></li>
-<li>mysql configure 安装参数解释：<blockquote>
-<ul>
-<li>-DCMAKE_INSTALL_PREFIX=/usr/local/mysql #指定安装路径<br>-DDEFAULT_CHARSET=utf8mb4 #默认使用utf8mb4字符<br>-DDEFAULT_COLLATION=utf8mb4_general_ci #校验字符<br>-DWITH_INNOBASE_STORAGE_ENGINE=1 #安装innodb引擎<br>-DWITH_BOOST=boost #指定boost的安装位置<br>-DENABLE_DOWNLOADS #是否要下载可选的文件。例如，启用此选项设置为1, cmake将下载谷歌所使用的测试套件运行单元测试 </li>
-</ul>
+<h3 id="6-2-用-Docker-部署"><a href="#6-2-用-Docker-部署" class="headerlink" title="6.2 用 Docker 部署"></a>6.2 用 Docker 部署</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">docker pull oddrationale/docker-shadowsocks</span><br><span class="line">docker run -d -p 1984:1984 oddrationale/docker-shadowsocks \</span><br><span class="line">  -s 0.0.0.0 -p 1984 -k <span class="variable">$SSPASSWORD</span> -m aes-256-cfb</span><br></pre></td></tr></table></figure>
+<p>该镜像使用 <code>ENTRYPOINT</code> 把容器当作可执行程序运行，更多命令行参数见 <a href="https://github.com/shadowsocks/shadowsocks" target="_blank" rel="noopener">shadowsocks 文档</a>。</p>
+<h3 id="6-3-部署-shadowsocks-manager"><a href="#6-3-部署-shadowsocks-manager" class="headerlink" title="6.3 部署 shadowsocks-manager"></a>6.3 部署 shadowsocks-manager</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/shadowsocks/shadowsocks-manager.git</span><br><span class="line"><span class="built_in">cd</span> shadowsocks-manager</span><br><span class="line">npm install -g bower</span><br><span class="line">npm install</span><br><span class="line">bower install</span><br><span class="line">mv config.js.sample config.js</span><br><span class="line">node server</span><br></pre></td></tr></table></figure>
+<h2 id="7-MongoDB"><a href="#7-MongoDB" class="headerlink" title="7. MongoDB"></a>7. MongoDB</h2><h3 id="7-1-安装"><a href="#7-1-安装" class="headerlink" title="7.1 安装"></a>7.1 安装</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install mongodb</span><br></pre></td></tr></table></figure>
+<p>用 apt-get 安装后会自动注册为服务（<code>/etc/init.d/mongodb</code>）：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo service mongodb start|stop|restart|status</span><br></pre></td></tr></table></figure>
+<p>几个程序的区别：<code>mongod</code> 是服务端程序（<code>mongod -h</code> 查看帮助），<code>mongodb</code> 服务脚本封装了 <code>mongod</code>，<code>mongo</code> 是客户端 shell。</p>
+<h3 id="7-2-开启远程连接"><a href="#7-2-开启远程连接" class="headerlink" title="7.2 开启远程连接"></a>7.2 开启远程连接</h3><p><strong>第 1 步：添加管理员账号</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mongo   <span class="comment"># 本机登录</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">use admin</span><br><span class="line">db.createUser(&#123; <span class="attr">user</span>: <span class="string">'admin'</span>, <span class="attr">pwd</span>: <span class="string">'xxxxxx'</span>, <span class="attr">roles</span>: [<span class="string">'root'</span>] &#125;)</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>原文使用的 <code>db.addUser()</code> 从 MongoDB 2.6 起已经废弃，之后的版本中被移除，请改用 <code>db.createUser()</code>。</p>
 </blockquote>
-</li>
-<li>编译 <code>make</code>  安装 <code>sudo make install</code> </li>
-<li><code>sudo chown -R mysql:mysql /usr/local/mysql</code> <code>sudo chown -R mysql:mysql /data/mysql/</code> #对mysql目录进行赋予权限 </li>
-<li>生成mysql配置文件 <code>sudo cp /usr/local/mysql/support-files/my-default.cnf /etc/my.cnf</code> </li>
-<li>对数据库进行初始化 先清空 /data/mysql/data  <code>sudo /usr/local/mysql/bin/mysqld --initialize --user=mysql --explicit_defaults_for_timestamp=1</code></li>
-<li>[Warning] TIMESTAMP with implicit DEFAULT value is deprecated. Please use –explicit_defaults_for_timestamp server option (see documentation for more details).<br>解决：/etc/my.cnf 加上 explicit_defaults_for_timestamp = 1 </li>
-<li>复制文件mysql.server 可以使用service 命令进行控制 <code>sudo cp /usr/local/mysql/support-files/mysql.server /etc/init.d/mysql</code> <code>sudo service mysql start</code> #启动mysql</li>
-<li><h1 id="修改密码：MySQL5-7在安装完后，第一次启动时，会在root目录下生产一个随机的密码，文件名为-mysql-secret-cat-root-mysql-secret"><a href="#修改密码：MySQL5-7在安装完后，第一次启动时，会在root目录下生产一个随机的密码，文件名为-mysql-secret-cat-root-mysql-secret" class="headerlink" title="修改密码：MySQL5.7在安装完后，第一次启动时，会在root目录下生产一个随机的密码，文件名为 .mysql_secret, cat /root/.mysql_secret"></a>修改密码：MySQL5.7在安装完后，第一次启动时，会在root目录下生产一个随机的密码，文件名为 .mysql_secret, <code>cat /root/.mysql_secret</code></h1></li>
-<li>登录数据库修改密码 <code>/usr/local/mysql/bin/mysql -u root -p</code> </li>
-<li>输入密码回车。登录成功后，输入以下字符，来修改密码，比如我要修改密码为root <code>set password = password(&#39;root&#39;);</code> </li>
-<li><h1 id="配置环境变量，否则-mysql-客户端命令不可用"><a href="#配置环境变量，否则-mysql-客户端命令不可用" class="headerlink" title="配置环境变量，否则 mysql 客户端命令不可用"></a>配置环境变量，否则 mysql 客户端命令不可用</h1><blockquote>
-<ul>
-<li><code>vim /etc/profile</code> 在文件末尾添加 PATH=/usr/local/mysql/bin:$PATH  export PATH </li>
-<li><code>source /etc/profile</code> </li>
-</ul>
+<p><strong>第 2 步：修改 <code>/etc/mongodb.conf</code></strong></p>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># bind_ip = 127.0.0.1   # 注释掉此行，允许远程连接</span></span><br><span class="line"><span class="attr">auth</span> = <span class="literal">true</span>             <span class="comment"># 去掉此行前的注释，开启认证</span></span><br></pre></td></tr></table></figure>
+<p><strong>第 3 步：重启 MongoDB</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo service mongodb restart</span><br></pre></td></tr></table></figure>
+<p><strong>第 4 步：防火墙开放 27017 端口</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo iptables -A INPUT -p tcp -m state --state NEW -m tcp --dport 27017 -j ACCEPT</span><br></pre></td></tr></table></figure>
+<p>如果需要远程登录指定的数据库，要在对应的数据库里创建用户。例如对数据库 <code>test</code>：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">use test</span><br><span class="line">db.createUser(&#123; <span class="attr">user</span>: <span class="string">'admin'</span>, <span class="attr">pwd</span>: <span class="string">'xxxxxx'</span>, <span class="attr">roles</span>: [<span class="string">'readWrite'</span>] &#125;)</span><br></pre></td></tr></table></figure>
+<p>之后就可以用这个用户访问 <code>test</code> 库了。</p>
+<h2 id="8-tmux"><a href="#8-tmux" class="headerlink" title="8. tmux"></a>8. tmux</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install tmux</span><br><span class="line">tmux new -s &lt;session&gt;   <span class="comment"># 新建会话</span></span><br><span class="line">tmux a -t &lt;session&gt;     <span class="comment"># 进入已打开的会话</span></span><br></pre></td></tr></table></figure>
+<p>更多用法见 <a href="/2016/07/23/tmux-learn/">tmux 使用入门</a>。</p>
+<h2 id="9-Nginx"><a href="#9-Nginx" class="headerlink" title="9. Nginx"></a>9. Nginx</h2><h3 id="9-1-安装与常用命令"><a href="#9-1-安装与常用命令" class="headerlink" title="9.1 安装与常用命令"></a>9.1 安装与常用命令</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install nginx</span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>用途</th>
+<th>命令</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>指定配置文件启动</td>
+<td><code>sudo nginx -c /path/to/nginx.conf</code></td>
+</tr>
+<tr>
+<td>快速停止 / 优雅停止</td>
+<td><code>sudo nginx -s stop</code> / <code>sudo nginx -s quit</code></td>
+</tr>
+<tr>
+<td>强制结束进程</td>
+<td><code>sudo pkill -9 nginx</code></td>
+</tr>
+<tr>
+<td>重载配置</td>
+<td><code>sudo nginx -s reload</code></td>
+</tr>
+<tr>
+<td>检查配置文件语法</td>
+<td><code>sudo nginx -t</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="9-2-配置示例（含-SSL）"><a href="#9-2-配置示例（含-SSL）" class="headerlink" title="9.2 配置示例（含 SSL）"></a>9.2 配置示例（含 SSL）</h3><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">worker_processes</span> <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line"><span class="section">events</span> &#123;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="section">http</span> &#123;</span><br><span class="line">    <span class="comment"># 压缩数据流</span></span><br><span class="line">    <span class="attribute">gzip</span>              <span class="literal">on</span>;</span><br><span class="line">    <span class="attribute">gzip_min_length</span>   <span class="number">1000</span>;</span><br><span class="line">    <span class="attribute">gzip_types</span>        text/plain text/css application/x-javascript;</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 负载均衡的服务器列表</span></span><br><span class="line">    <span class="comment"># 可以用 weight 参数设置权重，权重越高，被分配到的概率越大</span></span><br><span class="line">    <span class="attribute">upstream</span> shadowsocksManager &#123;</span><br><span class="line">        <span class="attribute">server</span> localhost:<span class="number">6003</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment"># test</span></span><br><span class="line">    <span class="section">server</span> &#123;</span><br><span class="line">        <span class="attribute">listen</span>       <span class="number">80</span>;</span><br><span class="line">        <span class="attribute">server_name</span>  v1.example.com;</span><br><span class="line"></span><br><span class="line">        <span class="attribute">location</span> / &#123;</span><br><span class="line">            <span class="attribute">proxy_pass</span> http://www.google.com;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment"># example.com</span></span><br><span class="line">    <span class="section">server</span> &#123;</span><br><span class="line">        <span class="attribute">listen</span>       <span class="number">80</span>;</span><br><span class="line">        <span class="attribute">listen</span>       <span class="number">443</span> ssl;   <span class="comment"># 只在 443 端口启用 SSL</span></span><br><span class="line">        <span class="attribute">server_name</span>  example.com;</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 证书文件路径</span></span><br><span class="line">        <span class="attribute">ssl_certificate</span>     /path/to/cert/example.com_bundle.crt;</span><br><span class="line">        <span class="comment"># 私钥文件路径</span></span><br><span class="line">        <span class="attribute">ssl_certificate_key</span> /path/to/cert/example.com.key;</span><br><span class="line"></span><br><span class="line">        <span class="attribute">location</span> / &#123;</span><br><span class="line">            <span class="comment"># 代理到上面定义的 upstream，名字要一致</span></span><br><span class="line">            <span class="attribute">proxy_pass</span> http://shadowsocksManager;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><strong>注意</strong>：原配置在同一个 server 里同时 <code>listen 80</code> 和 <code>listen 443</code>，又写了 <code>ssl on;</code>。这样 80 端口也会被强制走 SSL，HTTP 访问会失败。正确写法是 <code>listen 443 ssl;</code>。另外，<code>ssl on;</code> 指令在 Nginx 1.15 起已经废弃。</p>
 </blockquote>
-</li>
-<li>MySQL服务器上添加一个允许远程访问的用户<blockquote>
-<ul>
-<li>用root用户登陆, <code>mysql -u root -p</code></li>
-<li><code>grant all privileges on *.* to 创建的用户名@&quot;%&quot; identified by &quot;密码&quot;;</code> <code>flush privileges;</code> # 刷新刚才的内容. 格式：grant 权限 on 数据库名.表名 to 用户@登录主机 identified by “用户密码”;@ 后面是访问mysql的客户端IP地址（或是 主机名） % 代表任意的客户端，如果填写 localhost 为本地访问 那此用户就不能远程访问该mysql数据库了 </li>
-<li>查看用户 <code>&gt; use mysql;</code> <code>&gt; select user, host from user;</code></li>
-</ul>
+<h2 id="10-MySQL（源码编译安装）"><a href="#10-MySQL（源码编译安装）" class="headerlink" title="10. MySQL（源码编译安装）"></a>10. MySQL（源码编译安装）</h2><h3 id="10-1-准备环境"><a href="#10-1-准备环境" class="headerlink" title="10.1 准备环境"></a>10.1 准备环境</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install build-essential libncurses5-dev cmake</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建 mysql 用户（禁止登录）和数据目录</span></span><br><span class="line">sudo groupadd mysql</span><br><span class="line">sudo useradd -s /sbin/nologin -g mysql mysql</span><br><span class="line">sudo mkdir -p /data/mysql/data</span><br></pre></td></tr></table></figure>
+<h3 id="10-2-下载源码"><a href="#10-2-下载源码" class="headerlink" title="10.2 下载源码"></a>10.2 下载源码</h3><p>MySQL 5.7.5 之后的版本编译时依赖 boost，所以直接下载自带 boost 的源码包：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /usr/<span class="built_in">local</span>/src</span><br><span class="line">sudo wget http://dev.mysql.com/get/Downloads/MySQL-5.7/mysql-boost-5.7.13.tar.gz</span><br><span class="line">sudo tar zxvf mysql-boost-5.7.13.tar.gz</span><br><span class="line"><span class="built_in">cd</span> mysql-5.7.13/</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>网上有些教程会先执行 <code>sh BUILD/autorun.sh</code>，<strong>不要执行</strong>，否则会安装失败。</p>
 </blockquote>
-</li>
-</ul>
+<h3 id="10-3-编译安装"><a href="#10-3-编译安装" class="headerlink" title="10.3 编译安装"></a>10.3 编译安装</h3><p>从 MySQL 5.5 开始，<code>./configure</code> 编译配置方式已经取消，改用 <code>cmake</code>：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">cmake . -DCMAKE_INSTALL_PREFIX=/usr/<span class="built_in">local</span>/mysql \</span><br><span class="line">  -DSYSCONFDIR=/etc \</span><br><span class="line">  -DMYSQL_DATADIR=/data/mysql/data \</span><br><span class="line">  -DWITH_MYISAM_STORAGE_ENGINE=1 \</span><br><span class="line">  -DWITH_INNOBASE_STORAGE_ENGINE=1 \</span><br><span class="line">  -DWITH_PARTITION_STORAGE_ENGINE=1 \</span><br><span class="line">  -DWITH_FEDERATED_STORAGE_ENGINE=1 \</span><br><span class="line">  -DWITH_BLACKHOLE_STORAGE_ENGINE=1 \</span><br><span class="line">  -DEXTRA_CHARSETS=all \</span><br><span class="line">  -DDEFAULT_CHARSET=utf8mb4 \</span><br><span class="line">  -DDEFAULT_COLLATION=utf8mb4_general_ci \</span><br><span class="line">  -DWITH_EMBEDDED_SERVER=1 \</span><br><span class="line">  -DENABLED_LOCAL_INFILE=1 \</span><br><span class="line">  -DENABLE_DTRACE=0 \</span><br><span class="line">  -DWITH_BOOST=boost \</span><br><span class="line">  -DENABLE_DOWNLOADS=1</span><br><span class="line"></span><br><span class="line">make</span><br><span class="line">sudo make install</span><br></pre></td></tr></table></figure>
+<p>主要参数说明：</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-DCMAKE_INSTALL_PREFIX=/usr/local/mysql</code></td>
+<td>安装路径</td>
+</tr>
+<tr>
+<td><code>-DMYSQL_DATADIR=/data/mysql/data</code></td>
+<td>数据目录</td>
+</tr>
+<tr>
+<td><code>-DDEFAULT_CHARSET=utf8mb4</code></td>
+<td>默认字符集</td>
+</tr>
+<tr>
+<td><code>-DDEFAULT_COLLATION=utf8mb4_general_ci</code></td>
+<td>默认排序规则</td>
+</tr>
+<tr>
+<td><code>-DWITH_INNOBASE_STORAGE_ENGINE=1</code></td>
+<td>安装 InnoDB 引擎</td>
+</tr>
+<tr>
+<td><code>-DWITH_BOOST=boost</code></td>
+<td>boost 的位置（源码包自带的 <code>boost</code> 目录）</td>
+</tr>
+<tr>
+<td><code>-DENABLE_DOWNLOADS=1</code></td>
+<td>下载可选文件，例如 Google 的测试套件，用于运行单元测试</td>
+</tr>
+</tbody>
+</table>
+<h3 id="10-4-初始化"><a href="#10-4-初始化" class="headerlink" title="10.4 初始化"></a>10.4 初始化</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 目录授权</span></span><br><span class="line">sudo chown -R mysql:mysql /usr/<span class="built_in">local</span>/mysql</span><br><span class="line">sudo chown -R mysql:mysql /data/mysql/</span><br><span class="line"></span><br><span class="line"><span class="comment"># 生成配置文件（5.7.18 起不再提供 my-default.cnf，需要自己新建 /etc/my.cnf）</span></span><br><span class="line">sudo cp /usr/<span class="built_in">local</span>/mysql/support-files/my-default.cnf /etc/my.cnf</span><br><span class="line"></span><br><span class="line"><span class="comment"># 初始化数据库（/data/mysql/data 必须为空）</span></span><br><span class="line">sudo /usr/<span class="built_in">local</span>/mysql/bin/mysqld --initialize --user=mysql --explicit_defaults_for_timestamp=1</span><br></pre></td></tr></table></figure>
+<p>如果出现下面的警告：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[Warning] TIMESTAMP with implicit DEFAULT value is deprecated. Please use --explicit_defaults_for_timestamp server option (see documentation for more details).</span><br></pre></td></tr></table></figure>
+<p>在 <code>/etc/my.cnf</code> 的 <code>[mysqld]</code> 段加上 <code>explicit_defaults_for_timestamp = 1</code> 即可。</p>
+<h3 id="10-5-注册服务并启动"><a href="#10-5-注册服务并启动" class="headerlink" title="10.5 注册服务并启动"></a>10.5 注册服务并启动</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo cp /usr/<span class="built_in">local</span>/mysql/support-files/mysql.server /etc/init.d/mysql</span><br><span class="line">sudo service mysql start</span><br></pre></td></tr></table></figure>
+<h3 id="10-6-配置环境变量"><a href="#10-6-配置环境变量" class="headerlink" title="10.6 配置环境变量"></a>10.6 配置环境变量</h3><p>不配置的话，<code>mysql</code> 客户端命令不可用。在 <code>/etc/profile</code> 末尾添加：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> PATH=/usr/<span class="built_in">local</span>/mysql/bin:<span class="variable">$PATH</span></span><br></pre></td></tr></table></figure>
+<p>然后执行 <code>source /etc/profile</code> 使其生效。</p>
+<h3 id="10-7-修改-root-密码"><a href="#10-7-修改-root-密码" class="headerlink" title="10.7 修改 root 密码"></a>10.7 修改 root 密码</h3><p>MySQL 5.7 使用 <code>mysqld --initialize</code> 初始化时，会为 root 生成一个<strong>临时密码</strong>，并打印在初始化命令的输出和错误日志中（行内包含 <code>A temporary password is generated for root@localhost</code>）。</p>
+<blockquote>
+<p>原文说”密码保存在 <code>/root/.mysql_secret</code>“，那是旧的 <code>mysql_install_db</code> 初始化方式的行为（5.6 加 <code>--random-passwords</code> 参数时，以及 5.7.4 ~ 5.7.5 默认如此）。5.7.6 起推荐的 <code>mysqld --initialize</code> 不会生成这个文件。</p>
 </blockquote>
-</li>
-<li>源码安装redis, 并设置远程登陆<blockquote>
-<ul>
-<li>安装make <code>sudo apt-get make</code></li>
-<li>获取安装包 <code>wget http://download.redis.io/releases/redis-3.2.1.tar.gz</code></li>
-<li>安装 <code>tar xzf redis-3.2.1.tar.gz</code> <code>cd redis-3.2.1</code> <code>make</code> <code>make test</code> </li>
-<li>The binaries that are now compiled are available in the src directory. Run Redis with: <code>src/redis-server --port 6380</code> or <code>src/redis-server /etc/redis/redis.conf</code>  </li>
-<li>You can interact with Redis using the built-in client: <code>src/redis-cli</code></li>
-<li>如果要把redis安装到系统, 执行 <code>cd ./src</code> <code>sudo make install</code></li>
-<li>设置守护进程运行redis<blockquote>
-<ul>
-<li><code>vim redis.conf</code> 修改 <code>daemonize no</code> -&gt; <code>daemonize yes</code></li>
-</ul>
+<p>用临时密码登录后修改密码：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -u root -p</span><br></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">USER</span> <span class="string">'root'</span>@<span class="string">'localhost'</span> <span class="keyword">IDENTIFIED</span> <span class="keyword">BY</span> <span class="string">'yourpassword'</span>;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>5.7.6 以前的写法是 <code>SET PASSWORD = PASSWORD(&#39;yourpassword&#39;);</code>，新版本已经废弃。</p>
 </blockquote>
-</li>
-<li><code>sudo make install</code>, 执行这句命令可把redis安装到系统, 就无需使用 <code>src/redis-server</code> 来启动, 直接 <code>redis-server</code> , 不指定端口和配置文件, 会默认读取路径 /etc/redis.conf </li>
-<li>启动redis服务, 一般需指定自定义的配置文件 <code>redis-server redis.conf</code>, 不指的话则读取默认配置 </li>
-<li>停止redis服务 <code>redis-cli shutdown</code> </li>
-<li>如果要设置redis服务, <code>sudo cp ./utils/redis_init_script /etc/init.d/redis</code> <blockquote>
-<ul>
-<li><code>sudo service redis start/stop/...</code> </li>
-<li><code>service redis start</code> 默认配置文件读取 /etc/redis/.. , <code>sudo cp ./redis.conf /etc/redis/redis.conf</code></li>
-</ul>
+<h3 id="10-8-添加允许远程访问的用户"><a href="#10-8-添加允许远程访问的用户" class="headerlink" title="10.8 添加允许远程访问的用户"></a>10.8 添加允许远程访问的用户</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- MySQL 5.7 写法</span></span><br><span class="line"><span class="keyword">GRANT</span> <span class="keyword">ALL</span> <span class="keyword">PRIVILEGES</span> <span class="keyword">ON</span> *.* <span class="keyword">TO</span> <span class="string">'username'</span>@<span class="string">'%'</span> <span class="keyword">IDENTIFIED</span> <span class="keyword">BY</span> <span class="string">'yourpassword'</span>;</span><br><span class="line"><span class="keyword">FLUSH</span> <span class="keyword">PRIVILEGES</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- MySQL 8.0 起 GRANT 不能再创建用户，需要分两步</span></span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">USER</span> <span class="string">'username'</span>@<span class="string">'%'</span> <span class="keyword">IDENTIFIED</span> <span class="keyword">BY</span> <span class="string">'yourpassword'</span>;</span><br><span class="line"><span class="keyword">GRANT</span> <span class="keyword">ALL</span> <span class="keyword">PRIVILEGES</span> <span class="keyword">ON</span> *.* <span class="keyword">TO</span> <span class="string">'username'</span>@<span class="string">'%'</span>;</span><br></pre></td></tr></table></figure>
+<p>格式为 <code>GRANT 权限 ON 数据库名.表名 TO 用户@登录主机</code>。<code>@</code> 后面是允许访问的客户端 IP 或主机名：<code>%</code> 表示任意客户端；如果写 <code>localhost</code>，这个用户就只能本地访问，不能远程访问。</p>
+<p>查看用户：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">USE</span> mysql;</span><br><span class="line"><span class="keyword">SELECT</span> <span class="keyword">user</span>, host <span class="keyword">FROM</span> <span class="keyword">user</span>;</span><br></pre></td></tr></table></figure>
+<h2 id="11-Redis（源码安装）"><a href="#11-Redis（源码安装）" class="headerlink" title="11. Redis（源码安装）"></a>11. Redis（源码安装）</h2><h3 id="11-1-编译"><a href="#11-1-编译" class="headerlink" title="11.1 编译"></a>11.1 编译</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install make</span><br><span class="line">wget http://download.redis.io/releases/redis-3.2.1.tar.gz</span><br><span class="line">tar xzf redis-3.2.1.tar.gz</span><br><span class="line"><span class="built_in">cd</span> redis-3.2.1</span><br><span class="line">make</span><br><span class="line">make <span class="built_in">test</span></span><br></pre></td></tr></table></figure>
+<p>编译好的程序在 <code>src</code> 目录下，可以直接运行：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">src/redis-server --port 6380</span><br><span class="line"><span class="comment"># 或指定配置文件</span></span><br><span class="line">src/redis-server /etc/redis/redis.conf</span><br><span class="line"></span><br><span class="line"><span class="comment"># 内置客户端</span></span><br><span class="line">src/redis-cli</span><br></pre></td></tr></table></figure>
+<h3 id="11-2-安装到系统"><a href="#11-2-安装到系统" class="headerlink" title="11.2 安装到系统"></a>11.2 安装到系统</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo make install</span><br></pre></td></tr></table></figure>
+<p>安装后就不需要用 <code>src/redis-server</code> 启动，直接执行 <code>redis-server</code> 即可。</p>
+<blockquote>
+<p><strong>注意</strong>：<code>redis-server</code> 不带参数启动时<strong>不会</strong>读取任何配置文件，而是使用内置的默认配置，并提示 <code>no config file specified, using the default config</code>。一般都要指定配置文件启动：<code>redis-server /etc/redis/redis.conf</code>。</p>
 </blockquote>
-</li>
-<li>设置远程登陆, 并开启密码验证 <blockquote>
-<ul>
-<li><code>vim redis.conf</code>, 找到requirepass，然后修改如下: requirepass yourpassword; <code># bind 127.0.0.1 maidol.pw</code> 去除 # </li>
-<li>登陆 <code>redis-cli -h ip -p port -a yourpassword</code> </li>
-</ul>
+<p>停止服务：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">redis-cli shutdown</span><br></pre></td></tr></table></figure>
+<h3 id="11-3-后台运行"><a href="#11-3-后台运行" class="headerlink" title="11.3 后台运行"></a>11.3 后台运行</h3><p>编辑 <code>redis.conf</code>，把 <code>daemonize no</code> 改为：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">daemonize yes</span><br></pre></td></tr></table></figure>
+<h3 id="11-4-注册为系统服务并开机启动"><a href="#11-4-注册为系统服务并开机启动" class="headerlink" title="11.4 注册为系统服务并开机启动"></a>11.4 注册为系统服务并开机启动</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">sudo mkdir -p /etc/redis</span><br><span class="line"><span class="comment"># 服务脚本默认读取 /etc/redis/&lt;端口&gt;.conf</span></span><br><span class="line">sudo cp ./redis.conf /etc/redis/6379.conf</span><br><span class="line">sudo cp ./utils/redis_init_script /etc/init.d/redis</span><br><span class="line"></span><br><span class="line">sudo service redis start</span><br><span class="line">sudo service redis stop</span><br><span class="line"></span><br><span class="line"><span class="comment"># 开机启动</span></span><br><span class="line">sudo update-rc.d redis defaults</span><br></pre></td></tr></table></figure>
+<p>也可以直接运行源码包里的 <code>sudo ./utils/install_server.sh</code>，它会交互式地完成上面这些步骤。</p>
+<h3 id="11-5-允许远程访问并开启密码验证"><a href="#11-5-允许远程访问并开启密码验证" class="headerlink" title="11.5 允许远程访问并开启密码验证"></a>11.5 允许远程访问并开启密码验证</h3><p>编辑 <code>redis.conf</code>：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 注释掉 bind，或改为 0.0.0.0，允许其他主机访问</span></span><br><span class="line"><span class="comment"># bind 127.0.0.1</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 开启密码验证</span></span><br><span class="line">requirepass yourpassword</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>Redis 3.2 起默认开启 <code>protected-mode</code>：没有设置密码并且没有配置 bind 时，会拒绝远程连接。设置了 <code>requirepass</code> 后可以正常远程访问。</p>
 </blockquote>
-</li>
-<li>设置 redis 开机启动</li>
-</ul>
+<p>远程登录：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">redis-cli -h &lt;ip&gt; -p &lt;port&gt; -a yourpassword</span><br></pre></td></tr></table></figure>
+<h2 id="12-Hexo"><a href="#12-Hexo" class="headerlink" title="12. Hexo"></a>12. Hexo</h2><p>参见 <a href="/2016/07/06/hexo-deploy/">Hexo + GitHub Pages 搭建博客</a>。</p>
+<h2 id="13-Cloud9-IDE"><a href="#13-Cloud9-IDE" class="headerlink" title="13. Cloud9 IDE"></a>13. Cloud9 IDE</h2><p><a href="https://github.com/c9/core" target="_blank" rel="noopener">c9/core</a>（该项目已多年没有更新）：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/c9/core.git c9</span><br><span class="line"><span class="built_in">cd</span> c9</span><br><span class="line">scripts/install-sdk.sh</span><br><span class="line">node server.js --auth username:password</span><br></pre></td></tr></table></figure>
+<p>然后访问 <code>http://localhost:8181/ide.html</code>。</p>
+<h2 id="14-RabbitMQ"><a href="#14-RabbitMQ" class="headerlink" title="14. RabbitMQ"></a>14. RabbitMQ</h2><p>RabbitMQ 依赖 Erlang。下面记录了几种安装方式。当时只有 <strong>14.3 的预编译二进制包方式</strong>实际测试成功，其余方式仅作记录；现在更推荐 14.5 的 Docker 方式。</p>
+<h3 id="14-1-源码安装-Erlang"><a href="#14-1-源码安装-Erlang" class="headerlink" title="14.1 源码安装 Erlang"></a>14.1 源码安装 Erlang</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">wget http://erlang.org/download/otp_src_19.0.tar.gz</span><br><span class="line">tar zxvf otp_src_19.0.tar.gz</span><br><span class="line"><span class="built_in">cd</span> otp_src_19.0</span><br><span class="line">./configure --prefix=<span class="variable">$HOME</span>/erlang</span><br><span class="line">make</span><br><span class="line">make install</span><br></pre></td></tr></table></figure>
+<p>如果 <code>configure</code> 报错：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">configure: error: No curses library functions found</span><br><span class="line">configure: error: /bin/sh &apos;/home/deploy/erlang/configure&apos; failed for erts</span><br></pre></td></tr></table></figure>
+<p>原因是缺少 ncurses 包，安装后重新执行 <code>configure</code>：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install libncurses5-dev</span><br></pre></td></tr></table></figure>
+<p>在 <code>/etc/profile</code> 中添加环境变量，然后执行 <code>source /etc/profile</code> 使其生效：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># set erlang environment</span></span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$PATH</span>:<span class="variable">$HOME</span>/erlang/bin</span><br></pre></td></tr></table></figure>
+<p>执行 <code>erl</code>，能进入 Erlang shell 就说明安装成功。</p>
+<h3 id="14-2-源码安装-RabbitMQ"><a href="#14-2-源码安装-RabbitMQ" class="headerlink" title="14.2 源码安装 RabbitMQ"></a>14.2 源码安装 RabbitMQ</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">wget https://github.com/rabbitmq/rabbitmq-server/archive/rabbitmq_v3_6_3.tar.gz</span><br><span class="line">tar zxvf rabbitmq_v3_6_3.tar.gz</span><br><span class="line"><span class="built_in">cd</span> rabbitmq_v3_6_3</span><br><span class="line">make</span><br><span class="line">make install</span><br></pre></td></tr></table></figure>
+<p>如果 <code>make</code> 时报错 <code>error: rabbitmq-components.mk must be updated!</code>，先执行下面的命令，再重新 <code>make</code>：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">make rabbitmq-components-mk</span><br></pre></td></tr></table></figure>
+<p>在 <code>/etc/profile</code> 中添加环境变量，并执行 <code>source /etc/profile</code>：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># set rabbitmq environment</span></span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$PATH</span>:/usr/rabbitmq/sbin</span><br></pre></td></tr></table></figure>
+<p>启动：<code>rabbitmq-server start</code>。</p>
+<h3 id="14-3-使用预编译二进制包安装（实测可行）"><a href="#14-3-使用预编译二进制包安装（实测可行）" class="headerlink" title="14.3 使用预编译二进制包安装（实测可行）"></a>14.3 使用预编译二进制包安装（实测可行）</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 安装 Erlang 及依赖；缺少依赖时启动会报 error missing_dependencies,[crypto,ssl]</span></span><br><span class="line">sudo apt-get install -y erlang-nox erlang-dev erlang-src</span><br><span class="line"></span><br><span class="line"><span class="comment"># 下载并解压二进制包</span></span><br><span class="line">wget http://www.rabbitmq.com/releases/rabbitmq-server/v3.6.3/rabbitmq-server-generic-unix-3.6.3.tar.xz</span><br><span class="line">xz -d rabbitmq-server-generic-unix-3.6.3.tar.xz</span><br><span class="line">tar -xvf rabbitmq-server-generic-unix-3.6.3.tar</span><br><span class="line"></span><br><span class="line"><span class="comment"># 建议放到当前用户目录下，避免 sudo 时出现 command not found</span></span><br><span class="line">cp -rf ./rabbitmq_server-3.6.3 <span class="variable">$HOME</span>/rabbitmq</span><br></pre></td></tr></table></figure>
+<p>在 <code>/etc/profile</code> 中添加环境变量，并执行 <code>source /etc/profile</code>：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># set rabbitmq environment</span></span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$PATH</span>:<span class="variable">$HOME</span>/rabbitmq/sbin</span><br></pre></td></tr></table></figure>
+<p>常用命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">rabbitmq-server start      <span class="comment"># 前台启动</span></span><br><span class="line">rabbitmq-server -detached  <span class="comment"># 后台启动</span></span><br><span class="line">rabbitmqctl status         <span class="comment"># 查看状态</span></span><br><span class="line">rabbitmqctl stop           <span class="comment"># 停止</span></span><br></pre></td></tr></table></figure>
+<h3 id="14-4-使用-apt-get-安装"><a href="#14-4-使用-apt-get-安装" class="headerlink" title="14.4 使用 apt-get 安装"></a>14.4 使用 apt-get 安装</h3><blockquote>
+<p>下面的 <code>www.rabbitmq.com/debian</code> 软件源已经停用，新版本请参考<a href="https://www.rabbitmq.com/install-debian.html" target="_blank" rel="noopener">官方文档</a>。</p>
 </blockquote>
-</li>
-<li>安装hexo<blockquote>
-<ul>
-<li>配置环境<blockquote>
-<ul>
-<li>安装node, 安装git</li>
-<li>安装hexo<blockquote>
-<ul>
-<li><code>mkdir blog</code> <code>cd ./blog</code> <code>npm install -g hexo</code> </li>
-<li>初始化 <code>hexo init</code> or <code>npm install</code></li>
-<li>生成静态页 <code>hexo generate</code> or <code>hexo g</code> </li>
-<li>本地启动服务 <code>hexo server</code> 浏览器输入<a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a> </li>
-</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get -y upgrade</span><br><span class="line"></span><br><span class="line"><span class="comment"># 添加 RabbitMQ 软件源</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"deb http://www.rabbitmq.com/debian/ testing main"</span> | sudo tee -a /etc/apt/sources.list</span><br><span class="line"><span class="comment"># 添加签名 key</span></span><br><span class="line">curl http://www.rabbitmq.com/rabbitmq-signing-key-public.asc | sudo apt-key add -</span><br><span class="line"></span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install rabbitmq-server</span><br></pre></td></tr></table></figure>
+<h3 id="14-5-使用-Docker-部署"><a href="#14-5-使用-Docker-部署" class="headerlink" title="14.5 使用 Docker 部署"></a>14.5 使用 Docker 部署</h3><p><strong>官方镜像</strong>（<a href="https://hub.docker.com/_/rabbitmq/" target="_blank" rel="noopener">rabbitmq</a>）：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">docker pull rabbitmq</span><br><span class="line"></span><br><span class="line"><span class="comment"># 使用默认配置启动</span></span><br><span class="line">docker run -d --hostname my-rabbit --name some-rabbit rabbitmq:3</span><br><span class="line"></span><br><span class="line"><span class="comment"># 启用 Web 管理后台，需要使用 3-management 标签</span></span><br><span class="line">docker run -d --hostname my-rabbit \</span><br><span class="line">  --name rabbitmq \</span><br><span class="line">  -p your-ip:15672:15672 \</span><br><span class="line">  -p your-ip:5672:5672 \</span><br><span class="line">  -e RABBITMQ_DEFAULT_USER=xxxx \</span><br><span class="line">  -e RABBITMQ_DEFAULT_PASS=xxxx \</span><br><span class="line">  -e RABBITMQ_DEFAULT_VHOST=my_vhost \</span><br><span class="line">  rabbitmq:3-management</span><br></pre></td></tr></table></figure>
+<p><code>your-ip</code> 不指定时默认是 <code>0.0.0.0</code>。进入容器管理：<code>docker exec -it rabbitmq /bin/bash</code>，<code>exit</code> 退出。对容器修改后，可以用 <code>docker commit</code> 固化为镜像。</p>
+<p><strong>frodenas/rabbitmq 镜像</strong>（<a href="https://hub.docker.com/r/frodenas/rabbitmq/" target="_blank" rel="noopener">frodenas/rabbitmq</a>）：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">docker pull frodenas/rabbitmq</span><br><span class="line">docker run -d --hostname my-rabbit \</span><br><span class="line">  --name rabbitmq \</span><br><span class="line">  -p 5672:5672 \</span><br><span class="line">  -p 15672:15672 \</span><br><span class="line">  -e RABBITMQ_USERNAME=username \</span><br><span class="line">  -e RABBITMQ_PASSWORD=<span class="built_in">pwd</span> \</span><br><span class="line">  -e RABBITMQ_VHOST=myvhost \</span><br><span class="line">  frodenas/rabbitmq</span><br></pre></td></tr></table></figure>
+<h3 id="14-6-Web-管理后台与用户管理"><a href="#14-6-Web-管理后台与用户管理" class="headerlink" title="14.6 Web 管理后台与用户管理"></a>14.6 Web 管理后台与用户管理</h3><p>启用管理插件：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rabbitmq-plugins <span class="built_in">enable</span> rabbitmq_management</span><br></pre></td></tr></table></figure>
+<p>然后在浏览器访问 <code>http://[your IP]:15672/</code>。</p>
+<p>默认用户 <code>guest</code>（密码 <code>guest</code>）拥有 <code>/</code> 虚拟主机的全部权限，但<strong>只能从 localhost 访问</strong>（包括管理插件），建议删除或修改密码。如果需要临时解除限制，可以在配置文件 <code>rabbitmq.config</code> 中添加：</p>
+<figure class="highlight erlang"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[&#123;rabbit, [&#123;loopback_users, []&#125;]&#125;].</span><br></pre></td></tr></table></figure>
+<p>用 guest 远程登录并创建管理员用户后，再删掉这段配置，guest 就无法远程登录了，之后改用新用户登录。</p>
+<blockquote>
+<p>二进制安装包默认没有这个配置文件（<code>/etc/rabbitmq/rabbitmq.config</code>），可以从源码包中复制示例文件 <code>docs/rabbitmq.config.example</code>。</p>
 </blockquote>
-</li>
-<li>配置Github, 部署到Github <blockquote>
-<ul>
-<li>登陆Github, 建立Repository. 建立与你用户名对应的仓库，仓库名必须为【your_user_name.github.io】 </li>
-<li>建立关联 <blockquote>
-<ul>
-<li><code>cd ./blog</code> <code>vim _config.yml</code> 翻到最后, 如下编辑<br>deploy:<br>type: git<br>repo: <a href="https://github.com/maidol/maidol.github.io.git" target="_blank" rel="noopener">https://github.com/maidol/maidol.github.io.git</a><br>branch: master </li>
-<li>执行命令 <code>npm install hexo-deployer-git --save</code> </li>
-<li>配置github用户信息 <code>git config --global user.email &quot;you@example.com&quot;</code> <code>git config --global user.name &quot;Your Name&quot;</code> </li>
-<li>本地执行部署 <code>git pull</code> <code>hexo deploy</code> 浏览器中输入<a href="http://maidol.github.io/" target="_blank" rel="noopener">http://maidol.github.io/</a> </li>
-<li>每次部署的步骤 <code>hexo clean</code> <code>hexo generate</code> <code>hexo deploy</code> </li>
-</ul>
+<p>用户与权限管理：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 新增用户</span></span><br><span class="line">rabbitmqctl add_user username password</span><br><span class="line"><span class="comment"># 设置 administrator 角色，设置角色后才能登录 Web 管理后台</span></span><br><span class="line">rabbitmqctl set_user_tags username administrator</span><br><span class="line"><span class="comment"># 查看用户列表</span></span><br><span class="line">rabbitmqctl list_users</span><br><span class="line"><span class="comment"># 修改用户密码</span></span><br><span class="line">rabbitmqctl change_password username newpassword</span><br><span class="line"></span><br><span class="line"><span class="comment"># 新建 virtual host</span></span><br><span class="line">rabbitmqctl add_vhost test_host</span><br><span class="line">rabbitmqctl list_vhosts</span><br><span class="line"></span><br><span class="line"><span class="comment"># 给用户 test 分配 test_host 的权限，三个正则依次是 configure / write / read 权限</span></span><br><span class="line">rabbitmqctl set_permissions -p test_host <span class="built_in">test</span> <span class="string">"test-*"</span> <span class="string">".*"</span> <span class="string">".*"</span></span><br></pre></td></tr></table></figure>
+<p>执行完上面的命令后，用户 <code>test</code> 就可以访问虚拟主机 <code>test_host</code> 的资源了。</p>
+<h2 id="15-SSH-免密码登录"><a href="#15-SSH-免密码登录" class="headerlink" title="15. SSH 免密码登录"></a>15. SSH 免密码登录</h2><p>目标：让 A 机免密码登录 B 机（假设 B 机为 <code>192.168.1.181</code>，用户为 <code>user</code>）。</p>
+<p><strong>第 1 步：在 A 机上生成密钥对</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -P <span class="string">''</span></span><br></pre></td></tr></table></figure>
+<p><code>-P</code> 指定密钥的密码，<code>-P &#39;&#39;</code> 表示空密码。不加 <code>-P</code> 的话，需要按三次回车。命令会在 <code>~/.ssh/</code> 下生成 <code>id_rsa</code>（私钥）和 <code>id_rsa.pub</code>（公钥）。</p>
+<p><strong>第 2 步：把公钥复制到 B 机</strong></p>
+<p>推荐直接用 <code>ssh-copy-id</code>，一步完成复制和追加：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-copy-id user@192.168.1.181</span><br></pre></td></tr></table></figure>
+<p>也可以手动操作：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 在 A 机上执行</span></span><br><span class="line">scp ~/.ssh/id_rsa.pub user@192.168.1.181:~/id_rsa.pub</span><br><span class="line"></span><br><span class="line"><span class="comment"># 在 B 机上执行</span></span><br><span class="line">mkdir -p ~/.ssh &amp;&amp; chmod 700 ~/.ssh</span><br><span class="line">cat ~/id_rsa.pub &gt;&gt; ~/.ssh/authorized_keys</span><br><span class="line">chmod 600 ~/.ssh/authorized_keys</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>sshd 默认开启 <code>StrictModes</code>：家目录、<code>~/.ssh</code> 和 <code>authorized_keys</code> 不能让组用户或其他用户可写，否则会拒绝使用这个公钥。一般把 <code>~/.ssh</code> 设为 700、<code>authorized_keys</code> 设为 600。</p>
 </blockquote>
-</li>
-</ul>
+<p><strong>第 3 步：在 A 机上登录 B 机</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh user@192.168.1.181</span><br></pre></td></tr></table></figure>
+<p>原理见 <a href="/2016/06/27/study-note/">学习笔记</a> 中的”SSH 原理”部分。</p>
+<h2 id="16-流量监控"><a href="#16-流量监控" class="headerlink" title="16. 流量监控"></a>16. 流量监控</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># iftop：实时查看网卡流量</span></span><br><span class="line">sudo apt-get install iftop</span><br><span class="line">sudo iftop -i eth0</span><br><span class="line"></span><br><span class="line"><span class="comment"># vnstat：按小时、天、月统计流量</span></span><br><span class="line">sudo apt-get install vnstat</span><br><span class="line">vnstat -i eth0</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>待补充：shadowsocks 按端口限制流量和带宽、用 iptables 统计流量。</p>
 </blockquote>
-</li>
-<li>Hexo的常用命令 <blockquote>
-<ul>
-<li><code>hexo new&quot;postName&quot;</code> #新建文章 </li>
-<li><code>hexo new page&quot;pageName&quot;</code> #新建页面 </li>
-<li><code>hexo generate</code> #生成静态页面至public目录 </li>
-<li><code>hexo server</code> #开启预览访问端口 </li>
-<li><code>hexo deploy</code> #将.deploy目录部署到GitHub </li>
-</ul>
-</blockquote>
-</li>
-</ul>
-</blockquote>
-</li>
-</ul>
-</blockquote>
-</li>
-<li>安装cloud9/core <a href="https://github.com/c9/core" target="_blank" rel="noopener">https://github.com/c9/core</a><blockquote>
-<ul>
-<li><code>git clone https://github.com/c9/core.git</code> c9</li>
-<li><code>cd c9</code></li>
-<li><code>scripts/install-sdk.sh</code></li>
-<li><code>node server.js --auth username:password</code></li>
-<li>visit <a href="http://localhost:8181/ide.html" target="_blank" rel="noopener">http://localhost:8181/ide.html</a></li>
-</ul>
-</blockquote>
-</li>
-<li>ubuntu安装rabbimq<blockquote>
-<ul>
-<li>rabbimq依赖erlang<blockquote>
-<ul>
-<li>安装erlang <code>wget http://erlang.org/download/otp_src_19.0.tar.gz</code>  <code>tar zxvf otp_src_19.0.tar.gz</code> <code>cd otp_src_19.0</code> </li>
-<li><code>./configure --prefix=/home/kmaidol/erlang</code> <blockquote>
-<ul>
-<li>可能会报错 configure: error: No curses library functions found configure: error: /bin/sh ‘/home/kmaidol/erlang/configure’ failed for erts  </li>
-<li>原因是缺少ncurses包 解决：在ubuntu系统下 <code>apt-cache search ncurses</code> <code>sudo apt-get install libncurses5-dev</code></li>
-<li>继续安装erlang  <code>./configure --prefix=/home/kmaidol/erlang</code> <code>make</code> <code>make install</code></li>
-</ul>
-</blockquote>
-</li>
-<li>测试erlang 进入<code>cd /home/kmaidol/erlang</code>，启动erl测试erlang是否安装成功</li>
-<li>配置erlang环境变量<blockquote>
-<ul>
-<li>修改/etc/profile文件，增加下面的环境变量：（vim profile    i插入  编辑完毕ESC退出   wq!强制修改）</li>
-<li>#set erlang environment</li>
-<li>export PATH=$PATH:/home/kmaidol/erlang/bin</li>
-<li><code>source profile</code> 使得文件生效</li>
-</ul>
-</blockquote>
-</li>
-</ul>
-</blockquote>
-</li>
-<li>rabbitMq安装配置<blockquote>
-<ul>
-<li><code>wget https://github.com/rabbitmq/rabbitmq-server/archive/rabbitmq_v3_6_3.tar.gz</code> </li>
-<li><code>tar zxvf rabbitmq_v3_6_3.tar.gz</code> </li>
-<li><code>cd rabbitmq_v3_6_3</code>  <code>make</code><blockquote>
-<ul>
-<li>error: rabbitmq-components.mk must be updated! n this case, just run the following command to update your copy:<br><code>make rabbitmq-components-mk</code> </li>
-<li><code>make install</code> </li>
-</ul>
-</blockquote>
-</li>
-<li>修改/etc/profile，添加环境变量<blockquote>
-<ul>
-<li>#set rabbitmq environment</li>
-<li>export PATH=$PATH:/usr/rabbitmq/sbin</li>
-<li><code>source profile</code> 使得文件生效</li>
-</ul>
-</blockquote>
-</li>
-<li>启动 <code>rabbitmq-server start</code> </li>
-</ul>
-</blockquote>
-</li>
-<li>apt-get安装rabbitMq<blockquote>
-<ul>
-<li><code>apt-get update</code>  <code>apt-get -y upgrade</code> </li>
-<li>Enable RabbitMQ application repository: <code>echo &quot;deb http://www.rabbitmq.com/debian/ testing main&quot; &gt;&gt; /etc/apt/sources.list</code> </li>
-<li>Add the verification key for the package: <code>curl http://www.rabbitmq.com/rabbitmq-signing-key-public.asc | sudo apt-key add -</code> </li>
-<li>Update the sources with our new addition from above: <code>apt-get update</code> </li>
-<li><code>sudo apt-get install rabbitmq-server</code> </li>
-</ul>
-</blockquote>
-</li>
-<li>rabbitmq web管理页面插件安装 <blockquote>
-<ul>
-<li><code>rabbitmq-plugins enable rabbitmq_management</code> </li>
-<li>accessed using your favourite web browser by visiting: http://[your IP]:15672/</li>
-<li>guest具有”/“上的全部权限, 密码guest，仅能有localhost访问RabbitMQ包括Plugin，建议删除或更改密码。可通过将配置文件rabbitmq.config中添加<code>{loopback_users, []</code>来取消guest的登陆限制:<br>[{rabbit, [{loopback_users, []}]}], 然后可使用guest登陆创建一个admin用户, 之后删除这段{loopback_users, []}, guest就无法登陆了, 之后使用新用户进行登陆。二进制安装包默认没有这个配置文件(/etc/rabbitmq/rabbitmq.config), 可以从源码包中copy过来, 在源码包对应的文件<code>doc/rabbitmq.config.example</code></li>
-<li>增加用户 <code>rabbitmqctl add_user username</code> 设置administrator角色 <code>rabbitmqctl set_user_tags username administrator</code>  查看用户列表 <code>rabbitmqctl list_users</code> 修改用户的密码<code>rabbitmqctl  change_password  username  newpassword</code> <blockquote>
-<ul>
-<li>给用户分配角色后就可以登陆web管理后台</li>
-</ul>
-</blockquote>
-</li>
-<li>新建virtual host <code>rabbitmqctl add_vhost test_host</code> , 查看 <code>rabbitmqctl list_vhosts</code> 如此用户名为test的用户就可以访问vitrual host为test_host的资源了，并且具备读写的权限 </li>
-<li>分配访问权限 <code>rabbitmqctl set_permissions -p test_host  test &quot;test-*&quot; &quot;.*&quot; &quot;.*&quot;</code> </li>
-</ul>
-</blockquote>
-</li>
-<li>使用已编译安装包安装rabbitmq(只成功测试了这种安装方式可行)<blockquote>
-<ul>
-<li>安装erlang</li>
-<li>error missing_dependencies,[crypto,ssl], 需要安装其他依赖 <code>sudo apt-get install -y erlang-nox erlang-dev erlang-src</code>   </li>
-<li>获取二进制编译包 <code>wget http://www.rabbitmq.com/releases/rabbitmq-server/v3.6.3/rabbitmq-server-generic-unix-3.6.3.tar.xz</code> </li>
-<li>解压 <code>xz -d rabbitmq-server-generic-unix-3.6.3.tar.xz</code> <code>tar -xvf rabbitmq-server-generic-unix-3.6.3.tar</code> </li>
-<li><code>cd rabbitmq_server-3.6.3/</code> <code>cd ./sbin</code> 启动 <code>./rabbitmq-server start</code> </li>
-<li>修改/etc/profile，添加环境变量<blockquote>
-<ul>
-<li>程序路径建议放在当前用户/home/k/目录下, 避免 sudo not found 的错误</li>
-<li><code>cp -rf ./rabbitmq_server-3.6.3 /home/k/rabbitmq</code> </li>
-<li>#set rabbitmq environment</li>
-<li>export PATH=$PATH:/home/k/rabbitmq/sbin</li>
-<li><code>source profile</code> 使得文件生效</li>
-</ul>
-</blockquote>
-</li>
-<li>启动 <code>rabbitmq-server start</code> or <code>rabbitmq-server -detached</code> 查看状态 <code>rabbitmqctl status</code> 关闭 <code>rabbitmqctl stop</code></li>
-<li>启动时 error missing_dependencies,[crypto,ssl], 需要安装其他依赖 <code>sudo apt-get install -y erlang-nox erlang-dev erlang-src</code>  </li>
-</ul>
-</blockquote>
-</li>
-<li>使用官方rabbitmq docker images部署安装<blockquote>
-<ul>
-<li>安装docker, 并成功运行</li>
-<li><code>docker pull rabbitmq</code> <a href="https://hub.docker.com/_/rabbitmq/" target="_blank" rel="noopener">rabbitmq docker</a></li>
-<li>使用默认配置启动<br><code>docker run -d --hostname my-rabbit --name some-rabbit rabbitmq:3</code> </li>
-<li>自定义 并启用 rabbitmq web 管理 , 需要使用 <code>3-management</code><br><code>docker run -d --hostname my-rabbit \
---name rabbitmq \
--p your-ip:15672:15672 \
--p your-ip:5672:5672 \
--e RABBITMQ_DEFAULT_USER=xxxx \
--e RABBITMQ_DEFAULT_PASS=xxxx \
--e RABBITMQ_DEFAULT_VHOST=my_vhost \
-rabbitmq:3-management</code> <blockquote>
-<ul>
-<li>your-ip不指定的话, 默认就是’0.0.0.0’</li>
-<li><code>docker run -d rabbitmq</code>  参数运行了容器, <code>docker exec -it rabbitmq /bin/bash</code> 可以进入容器进行管理 <code>exit</code> 退出 , 对容器修改后, 可通过 <code>commit</code> 固化为images  </li>
-</ul>
-</blockquote>
-</li>
-</ul>
-</blockquote>
-</li>
-<li>使用frodenas/rabbitmq docker images部署rabbitmq<blockquote>
-<ul>
-<li>安装docker, 并成功运行 </li>
-<li><code>docker pull frodenas/rabbitmq</code>  <a href="https://hub.docker.com/r/frodenas/rabbitmq/" target="_blank" rel="noopener">rabbitmq docker</a></li>
-<li><code>docker run -d --hostname my-rabbit \
---name rabbitmq \
--p 5672:5672 \
--p 15672:15672 \
--e RABBITMQ_USERNAME=username \
--e RABBITMQ_PASSWORD=pwd \
--e RABBITMQ_VHOST=myvhost \
-frodenas/rabbitmq</code> </li>
-</ul>
-</blockquote>
-</li>
-</ul>
-</blockquote>
-</li>
-<li>ssh免密码登陆<blockquote>
-<ul>
-<li><code>ssh-keygen -t rsa -P &#39;&#39;</code> <blockquote>
-<ul>
-<li>-P表示密码，-P ‘’ 就表示空密码，也可以不用-P参数，这样就要三车回车，用-P就一次回车。它在/home/chenlb下生成.ssh目录，.ssh下有id_rsa和id_rsa.pub </li>
-</ul>
-</blockquote>
-</li>
-<li>把A机下的id_rsa.pub复制到B机下，在B机的.ssh/authorized_keys文件里，用scp复制 <code>scp .ssh/id_rsa.pub chenlb@192.168.1.181:/home/chenlb/id_rsa.pub</code>  </li>
-<li>B机把从A机复制的id_rsa.pub添加到.ssh/authorzied_keys文件里 <code>cat id_rsa.pub &gt;&gt; .ssh/authorized_keys</code> <code>chmod 600 .ssh/authorized_keys</code> authorized_keys的权限要是600, A机登录B机<code>ssh 192.168.1.181</code> </li>
-</ul>
-</blockquote>
-</li>
-<li>流量监控 vnstat/iftop <blockquote>
-<ul>
-<li>ubuntu 下安装 <code>sudo apt-get install iftop</code></li>
-<li><code>sudo iftop -i eth0</code></li>
-</ul>
-</blockquote>
-</li>
-<li>shadowsocks 限制端口流量/带宽, 流量统计, iptables</li>
-</ul>
 
       
     </div>
@@ -794,14 +537,14 @@ frodenas/rabbitmq</code> </li>
       <strong class="article-nav-caption"><</strong>
       <div class="article-nav-title">
         
-          study-github
+          GitHub 新建本地仓库与远程仓库的基本用法
         
       </div>
     </a>
   
   
     <a href="/2016/06/27/study-note/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">study-note</div>
+      <div class="article-nav-title">学习笔记</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -836,7 +579,7 @@ frodenas/rabbitmq</code> </li>
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="vps_deploy" data-title="vps-deploy" data-url="http://yoursite.com/2016/07/06/vps_deploy/"></div>
+	<div class="ds-thread" data-thread-key="vps_deploy" data-title="VPS 部署笔记" data-url="http://yoursite.com/2016/07/06/vps_deploy/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">

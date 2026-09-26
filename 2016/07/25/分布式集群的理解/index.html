@@ -4,20 +4,20 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>分布式集群的理解 | Hexo</title>
+  <title>分布式与集群的理解 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="分布式：一个业务分拆多个子业务，部署在不同的服务器上集群：同一个业务，部署在多个服务器上   1：分布式是指将不同的业务分布在不同的地方。 而集群指的是将几台服务器集中在一起，实现同一业务。分布式中的每一个节点，都可以做集群。 而集群并不一定就是分布式的。   举例：就比如新浪网，访问的人多了，他可以做一个群集，前面放一个响应服务器，后面几台服务器完成同一业务，如果有业务访问的时候，响应服务器看">
+  <meta name="description" content="一句话概括：分布式是把一个业务拆成多个子业务，分别部署在不同的服务器上；集群是把同一个业务部署在多台服务器上。">
 <meta name="keywords" content="分布式,集群">
 <meta property="og:type" content="article">
-<meta property="og:title" content="分布式集群的理解">
+<meta property="og:title" content="分布式与集群的理解">
 <meta property="og:url" content="http://yoursite.com/2016/07/25/分布式集群的理解/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="分布式：一个业务分拆多个子业务，部署在不同的服务器上集群：同一个业务，部署在多个服务器上   1：分布式是指将不同的业务分布在不同的地方。 而集群指的是将几台服务器集中在一起，实现同一业务。分布式中的每一个节点，都可以做集群。 而集群并不一定就是分布式的。   举例：就比如新浪网，访问的人多了，他可以做一个群集，前面放一个响应服务器，后面几台服务器完成同一业务，如果有业务访问的时候，响应服务器看">
+<meta property="og:description" content="一句话概括：分布式是把一个业务拆成多个子业务，分别部署在不同的服务器上；集群是把同一个业务部署在多台服务器上。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2026-09-23T16:13:03.233Z">
+<meta property="og:updated_time" content="2026-09-26T15:32:25.581Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="分布式集群的理解">
-<meta name="twitter:description" content="分布式：一个业务分拆多个子业务，部署在不同的服务器上集群：同一个业务，部署在多个服务器上   1：分布式是指将不同的业务分布在不同的地方。 而集群指的是将几台服务器集中在一起，实现同一业务。分布式中的每一个节点，都可以做集群。 而集群并不一定就是分布式的。   举例：就比如新浪网，访问的人多了，他可以做一个群集，前面放一个响应服务器，后面几台服务器完成同一业务，如果有业务访问的时候，响应服务器看">
+<meta name="twitter:title" content="分布式与集群的理解">
+<meta name="twitter:description" content="一句话概括：分布式是把一个业务拆成多个子业务，分别部署在不同的服务器上；集群是把同一个业务部署在多台服务器上。">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -130,7 +130,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/AI-Agent/" style="font-size: 10px;">AI Agent</a> <a href="/tags/Claude-Code/" style="font-size: 10px;">Claude Code</a> <a href="/tags/Code-Graph/" style="font-size: 10px;">Code Graph</a> <a href="/tags/DrSG/" style="font-size: 10px;">DrSG</a> <a href="/tags/cmd/" style="font-size: 10px;">cmd</a> <a href="/tags/deploy/" style="font-size: 20px;">deploy</a> <a href="/tags/docker/" style="font-size: 10px;">docker</a> <a href="/tags/docker-compose/" style="font-size: 10px;">docker-compose</a> <a href="/tags/git/" style="font-size: 15px;">git</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/iaas/" style="font-size: 10px;">iaas</a> <a href="/tags/ipv6/" style="font-size: 10px;">ipv6</a> <a href="/tags/linode/" style="font-size: 10px;">linode</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/nginx/" style="font-size: 10px;">nginx</a> <a href="/tags/paas/" style="font-size: 10px;">paas</a> <a href="/tags/saas/" style="font-size: 10px;">saas</a> <a href="/tags/tmux/" style="font-size: 10px;">tmux</a> <a href="/tags/ubuntu/" style="font-size: 10px;">ubuntu</a> <a href="/tags/vpn/" style="font-size: 10px;">vpn</a> <a href="/tags/vps/" style="font-size: 10px;">vps</a> <a href="/tags/webpack/" style="font-size: 10px;">webpack</a> <a href="/tags/weichat/" style="font-size: 10px;">weichat</a> <a href="/tags/二进制格式/" style="font-size: 10px;">二进制格式</a> <a href="/tags/入门/" style="font-size: 10px;">入门</a> <a href="/tags/公众号/" style="font-size: 10px;">公众号</a> <a href="/tags/分布式/" style="font-size: 10px;">分布式</a> <a href="/tags/基础/" style="font-size: 10px;">基础</a> <a href="/tags/微信/" style="font-size: 10px;">微信</a> <a href="/tags/文本/" style="font-size: 10px;">文本</a> <a href="/tags/自动化部署/" style="font-size: 10px;">自动化部署</a> <a href="/tags/集群/" style="font-size: 10px;">集群</a>
+						<a href="/tags/AI-Agent/" style="font-size: 10px;">AI Agent</a> <a href="/tags/Claude-Code/" style="font-size: 10px;">Claude Code</a> <a href="/tags/Code-Graph/" style="font-size: 10px;">Code Graph</a> <a href="/tags/DrSG/" style="font-size: 10px;">DrSG</a> <a href="/tags/cmd/" style="font-size: 10px;">cmd</a> <a href="/tags/deploy/" style="font-size: 20px;">deploy</a> <a href="/tags/docker/" style="font-size: 15px;">docker</a> <a href="/tags/docker-compose/" style="font-size: 10px;">docker-compose</a> <a href="/tags/git/" style="font-size: 15px;">git</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/iaas/" style="font-size: 10px;">iaas</a> <a href="/tags/ipv6/" style="font-size: 10px;">ipv6</a> <a href="/tags/licode/" style="font-size: 10px;">licode</a> <a href="/tags/linode/" style="font-size: 10px;">linode</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/nginx/" style="font-size: 10px;">nginx</a> <a href="/tags/paas/" style="font-size: 10px;">paas</a> <a href="/tags/saas/" style="font-size: 10px;">saas</a> <a href="/tags/tmux/" style="font-size: 15px;">tmux</a> <a href="/tags/ubuntu/" style="font-size: 10px;">ubuntu</a> <a href="/tags/vpn/" style="font-size: 10px;">vpn</a> <a href="/tags/vps/" style="font-size: 10px;">vps</a> <a href="/tags/webpack/" style="font-size: 10px;">webpack</a> <a href="/tags/weichat/" style="font-size: 10px;">weichat</a> <a href="/tags/二进制格式/" style="font-size: 10px;">二进制格式</a> <a href="/tags/入门/" style="font-size: 10px;">入门</a> <a href="/tags/公众号/" style="font-size: 10px;">公众号</a> <a href="/tags/分布式/" style="font-size: 10px;">分布式</a> <a href="/tags/基础/" style="font-size: 10px;">基础</a> <a href="/tags/微信/" style="font-size: 10px;">微信</a> <a href="/tags/文本/" style="font-size: 10px;">文本</a> <a href="/tags/权限设计/" style="font-size: 10px;">权限设计</a> <a href="/tags/笔记/" style="font-size: 10px;">笔记</a> <a href="/tags/自动化部署/" style="font-size: 10px;">自动化部署</a> <a href="/tags/集群/" style="font-size: 10px;">集群</a>
 					</div>
 				</section>
 				
@@ -227,7 +227,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      分布式集群的理解
+      分布式与集群的理解
     </h1>
   
 
@@ -240,6 +240,10 @@
 	</div>
 
         
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/架构/">架构</a>
+	</div>
+
 
         <div class="clearfix"></div>
       </div>
@@ -247,23 +251,49 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <ul>
-<li>分布式：一个业务分拆多个子业务，部署在不同的服务器上集群：同一个业务，部署在多个服务器上 <blockquote>
+        <p>一句话概括：<strong>分布式</strong>是把一个业务拆成多个子业务，分别部署在不同的服务器上；<strong>集群</strong>是把同一个业务部署在多台服务器上。</p>
+<a id="more"></a>
+<h2 id="概念区别"><a href="#概念区别" class="headerlink" title="概念区别"></a>概念区别</h2><table>
+<thead>
+<tr>
+<th>对比项</th>
+<th>分布式</th>
+<th>集群</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>部署方式</td>
+<td>不同业务分布在不同节点</td>
+<td>同一业务部署在多个节点</td>
+</tr>
+<tr>
+<td>提升效率的方式</td>
+<td>缩短<strong>单个任务</strong>的执行时间</td>
+<td>提高<strong>单位时间内</strong>完成的任务数</td>
+</tr>
+<tr>
+<td>单节点故障</td>
+<td>该节点承担的业务不可用</td>
+<td>其他节点可以顶上，业务不中断</td>
+</tr>
+<tr>
+<td>相互关系</td>
+<td>分布式中的每一个节点都可以再做集群</td>
+<td>集群不一定是分布式的</td>
+</tr>
+</tbody>
+</table>
+<h2 id="举例：集群"><a href="#举例：集群" class="headerlink" title="举例：集群"></a>举例：集群</h2><p>以新浪网为例，访问量大了以后可以做一个集群：前面放一台负载均衡（响应）服务器，后面若干台服务器完成同一个业务。请求到来时，负载均衡服务器挑选一台负载较轻的服务器来处理。</p>
+<p>集群有较强的组织性，一台服务器宕机，其他服务器可以顶上来。而分布式从狭义上理解和集群有些相似，但组织比较松散：每个节点完成不同的业务，一个节点宕机，这个业务就不可访问了（除非该节点本身也做了集群）。</p>
+<h2 id="举例：执行效率"><a href="#举例：执行效率" class="headerlink" title="举例：执行效率"></a>举例：执行效率</h2><p>假设一个任务由 10 个子任务组成，每个子任务单独执行需要 1 小时，那么在一台服务器上执行完该任务需要 10 小时。</p>
 <ul>
-<li>1：分布式是指将不同的业务分布在不同的地方。 而集群指的是将几台服务器集中在一起，实现同一业务。分布式中的每一个节点，都可以做集群。 而集群并不一定就是分布式的。 <blockquote>
-<ul>
-<li>举例：就比如新浪网，访问的人多了，他可以做一个群集，前面放一个响应服务器，后面几台服务器完成同一业务，如果有业务访问的时候，响应服务器看哪台服务器的负载不是很重，就将给哪一台去完成。而分布式，从窄意上理解，也跟集群差不多， 但是它的组织比较松散，不像集群，有一个组织性，一台服务器垮了，其它的服务器可以顶上来。分布式的每一个节点，都完成不同的业务，一个节点垮了，哪这个业务就不可访问了。</li>
+<li><strong>分布式方案</strong>：提供 10 台服务器，每台只负责处理一个子任务。在不考虑子任务间依赖关系的情况下，执行完这个任务只需要 1 小时。这种工作模式的典型代表是 Hadoop 的 Map/Reduce 分布式计算模型。</li>
+<li><strong>集群方案</strong>：同样提供 10 台服务器，每台都能独立处理整个任务。假设有 10 个任务同时到达，10 台服务器同时工作，10 小时后 10 个任务同时完成。整体来看，仍然是平均 1 小时完成一个任务。</li>
 </ul>
+<blockquote>
+<p>两种方案的吞吐量相同，区别在于：分布式降低了<strong>单个任务的延迟</strong>，集群提高了<strong>系统的并发处理能力和可用性</strong>。</p>
 </blockquote>
-</li>
-<li>2：简单说，分布式是以缩短单个任务的执行时间来提升效率的，而集群则是通过提高单位时间内执行的任务数来提升效率。 <blockquote>
-<p>-例如：<br>如果一个任务由10个子任务组成，每个子任务单独执行需1小时，则在一台服务器上执行该任务需10小时。采用分布式方案，提供10台服务器，每台服务器只负责处理一个子任务，不考虑子任务间的依赖关系，执行完这个任务只需一个小时。(这种工作模式的一个典型代表就是Hadoop的Map/Reduce分布式计算模型）;而采用集群方案，同样提供10台服务器，每台服务器都能独立处理这个任务。假设有10个任务同时到达，10个服务器将同时工作，1小时后，10个任务同时完成，这样，整身来看，还是1小时内完成一个任务！ </p>
-</blockquote>
-</li>
-</ul>
-</blockquote>
-</li>
-</ul>
 
       
     </div>
@@ -273,18 +303,18 @@
     
 <nav id="article-nav">
   
-    <a href="/2016/10/03/docker-compose/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2016/08/19/文本与二进制格式/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption"><</strong>
       <div class="article-nav-title">
         
-          docker-compose
+          文本与二进制格式
         
       </div>
     </a>
   
   
     <a href="/2016/07/23/tmux-learn/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">tmux-learn</div>
+      <div class="article-nav-title">tmux 使用入门</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -319,7 +349,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="分布式集群的理解" data-title="分布式集群的理解" data-url="http://yoursite.com/2016/07/25/分布式集群的理解/"></div>
+	<div class="ds-thread" data-thread-key="分布式集群的理解" data-title="分布式与集群的理解" data-url="http://yoursite.com/2016/07/25/分布式集群的理解/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">

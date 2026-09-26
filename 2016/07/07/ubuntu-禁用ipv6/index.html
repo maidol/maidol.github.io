@@ -4,20 +4,20 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Ubuntu 14.04 / Debian 7.8 禁止 IPv6 的设置方法 | Hexo</title>
+  <title>Ubuntu 14.04 / Debian 7.8 禁用 IPv6 的设置方法 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="vim /etc/sysctl.conf  添加内容, 如果是 OpenVZ 环境，请把最后一条的 eth0 改成 venet0 ，同理如果网卡是 eth1 或者其他的名字，也要相应修改。net.ipv6.conf.all.disable_ipv6 = 1net.ipv6.conf.default.disable_ipv6 = 1net.ipv6.conf.lo.disable_ipv6 = 1">
+  <meta name="description" content="通过 sysctl 内核参数在 Ubuntu 14.04 / Debian 7.8 上永久禁用 IPv6。">
 <meta name="keywords" content="deploy,ubuntu,ipv6">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Ubuntu 14.04 &#x2F; Debian 7.8 禁止 IPv6 的设置方法">
+<meta property="og:title" content="Ubuntu 14.04 &#x2F; Debian 7.8 禁用 IPv6 的设置方法">
 <meta property="og:url" content="http://yoursite.com/2016/07/07/ubuntu-禁用ipv6/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="vim /etc/sysctl.conf  添加内容, 如果是 OpenVZ 环境，请把最后一条的 eth0 改成 venet0 ，同理如果网卡是 eth1 或者其他的名字，也要相应修改。net.ipv6.conf.all.disable_ipv6 = 1net.ipv6.conf.default.disable_ipv6 = 1net.ipv6.conf.lo.disable_ipv6 = 1">
+<meta property="og:description" content="通过 sysctl 内核参数在 Ubuntu 14.04 / Debian 7.8 上永久禁用 IPv6。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2026-09-23T16:13:03.233Z">
+<meta property="og:updated_time" content="2026-09-26T15:32:25.580Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Ubuntu 14.04 &#x2F; Debian 7.8 禁止 IPv6 的设置方法">
-<meta name="twitter:description" content="vim /etc/sysctl.conf  添加内容, 如果是 OpenVZ 环境，请把最后一条的 eth0 改成 venet0 ，同理如果网卡是 eth1 或者其他的名字，也要相应修改。net.ipv6.conf.all.disable_ipv6 = 1net.ipv6.conf.default.disable_ipv6 = 1net.ipv6.conf.lo.disable_ipv6 = 1">
+<meta name="twitter:title" content="Ubuntu 14.04 &#x2F; Debian 7.8 禁用 IPv6 的设置方法">
+<meta name="twitter:description" content="通过 sysctl 内核参数在 Ubuntu 14.04 / Debian 7.8 上永久禁用 IPv6。">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -130,7 +130,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/AI-Agent/" style="font-size: 10px;">AI Agent</a> <a href="/tags/Claude-Code/" style="font-size: 10px;">Claude Code</a> <a href="/tags/Code-Graph/" style="font-size: 10px;">Code Graph</a> <a href="/tags/DrSG/" style="font-size: 10px;">DrSG</a> <a href="/tags/cmd/" style="font-size: 10px;">cmd</a> <a href="/tags/deploy/" style="font-size: 20px;">deploy</a> <a href="/tags/docker/" style="font-size: 10px;">docker</a> <a href="/tags/docker-compose/" style="font-size: 10px;">docker-compose</a> <a href="/tags/git/" style="font-size: 15px;">git</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/iaas/" style="font-size: 10px;">iaas</a> <a href="/tags/ipv6/" style="font-size: 10px;">ipv6</a> <a href="/tags/linode/" style="font-size: 10px;">linode</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/nginx/" style="font-size: 10px;">nginx</a> <a href="/tags/paas/" style="font-size: 10px;">paas</a> <a href="/tags/saas/" style="font-size: 10px;">saas</a> <a href="/tags/tmux/" style="font-size: 10px;">tmux</a> <a href="/tags/ubuntu/" style="font-size: 10px;">ubuntu</a> <a href="/tags/vpn/" style="font-size: 10px;">vpn</a> <a href="/tags/vps/" style="font-size: 10px;">vps</a> <a href="/tags/webpack/" style="font-size: 10px;">webpack</a> <a href="/tags/weichat/" style="font-size: 10px;">weichat</a> <a href="/tags/二进制格式/" style="font-size: 10px;">二进制格式</a> <a href="/tags/入门/" style="font-size: 10px;">入门</a> <a href="/tags/公众号/" style="font-size: 10px;">公众号</a> <a href="/tags/分布式/" style="font-size: 10px;">分布式</a> <a href="/tags/基础/" style="font-size: 10px;">基础</a> <a href="/tags/微信/" style="font-size: 10px;">微信</a> <a href="/tags/文本/" style="font-size: 10px;">文本</a> <a href="/tags/自动化部署/" style="font-size: 10px;">自动化部署</a> <a href="/tags/集群/" style="font-size: 10px;">集群</a>
+						<a href="/tags/AI-Agent/" style="font-size: 10px;">AI Agent</a> <a href="/tags/Claude-Code/" style="font-size: 10px;">Claude Code</a> <a href="/tags/Code-Graph/" style="font-size: 10px;">Code Graph</a> <a href="/tags/DrSG/" style="font-size: 10px;">DrSG</a> <a href="/tags/cmd/" style="font-size: 10px;">cmd</a> <a href="/tags/deploy/" style="font-size: 20px;">deploy</a> <a href="/tags/docker/" style="font-size: 15px;">docker</a> <a href="/tags/docker-compose/" style="font-size: 10px;">docker-compose</a> <a href="/tags/git/" style="font-size: 15px;">git</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/iaas/" style="font-size: 10px;">iaas</a> <a href="/tags/ipv6/" style="font-size: 10px;">ipv6</a> <a href="/tags/licode/" style="font-size: 10px;">licode</a> <a href="/tags/linode/" style="font-size: 10px;">linode</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/nginx/" style="font-size: 10px;">nginx</a> <a href="/tags/paas/" style="font-size: 10px;">paas</a> <a href="/tags/saas/" style="font-size: 10px;">saas</a> <a href="/tags/tmux/" style="font-size: 15px;">tmux</a> <a href="/tags/ubuntu/" style="font-size: 10px;">ubuntu</a> <a href="/tags/vpn/" style="font-size: 10px;">vpn</a> <a href="/tags/vps/" style="font-size: 10px;">vps</a> <a href="/tags/webpack/" style="font-size: 10px;">webpack</a> <a href="/tags/weichat/" style="font-size: 10px;">weichat</a> <a href="/tags/二进制格式/" style="font-size: 10px;">二进制格式</a> <a href="/tags/入门/" style="font-size: 10px;">入门</a> <a href="/tags/公众号/" style="font-size: 10px;">公众号</a> <a href="/tags/分布式/" style="font-size: 10px;">分布式</a> <a href="/tags/基础/" style="font-size: 10px;">基础</a> <a href="/tags/微信/" style="font-size: 10px;">微信</a> <a href="/tags/文本/" style="font-size: 10px;">文本</a> <a href="/tags/权限设计/" style="font-size: 10px;">权限设计</a> <a href="/tags/笔记/" style="font-size: 10px;">笔记</a> <a href="/tags/自动化部署/" style="font-size: 10px;">自动化部署</a> <a href="/tags/集群/" style="font-size: 10px;">集群</a>
 					</div>
 				</section>
 				
@@ -227,7 +227,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Ubuntu 14.04 / Debian 7.8 禁止 IPv6 的设置方法
+      Ubuntu 14.04 / Debian 7.8 禁用 IPv6 的设置方法
     </h1>
   
 
@@ -240,6 +240,10 @@
 	</div>
 
         
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/Linux/">Linux</a>
+	</div>
+
 
         <div class="clearfix"></div>
       </div>
@@ -247,16 +251,17 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <ul>
-<li><code>vim /etc/sysctl.conf</code><blockquote>
-<ul>
-<li>添加内容, 如果是 OpenVZ 环境，请把最后一条的 eth0 改成 venet0 ，同理如果网卡是 eth1 或者其他的名字，也要相应修改。<br>net.ipv6.conf.all.disable_ipv6 = 1<br>net.ipv6.conf.default.disable_ipv6 = 1<br>net.ipv6.conf.lo.disable_ipv6 = 1<br>net.ipv6.conf.eth0.disable_ipv6 = 1</li>
-<li>执行 <code>sudo sysctl -p</code></li>
-<li><code>ifconfig</code> 查看</li>
-</ul>
+        <p>通过 <code>sysctl</code> 内核参数在 Ubuntu 14.04 / Debian 7.8 上永久禁用 IPv6。</p>
+<a id="more"></a>
+<h2 id="1-修改内核参数"><a href="#1-修改内核参数" class="headerlink" title="1. 修改内核参数"></a>1. 修改内核参数</h2><p>编辑 <code>/etc/sysctl.conf</code>：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /etc/sysctl.conf</span><br></pre></td></tr></table></figure>
+<p>在文件末尾添加：</p>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">net.ipv6.conf.all.disable_ipv6</span> = <span class="number">1</span></span><br><span class="line"><span class="attr">net.ipv6.conf.default.disable_ipv6</span> = <span class="number">1</span></span><br><span class="line"><span class="attr">net.ipv6.conf.lo.disable_ipv6</span> = <span class="number">1</span></span><br><span class="line"><span class="attr">net.ipv6.conf.eth0.disable_ipv6</span> = <span class="number">1</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><strong>注意</strong>：最后一行中的 <code>eth0</code> 是网卡名称，需要按实际情况修改。OpenVZ 环境改成 <code>venet0</code>；如果网卡叫 <code>eth1</code> 或其他名字，也要相应修改。可以用 <code>ip link</code> 查看网卡名称。</p>
 </blockquote>
-</li>
-</ul>
+<h2 id="2-使配置生效"><a href="#2-使配置生效" class="headerlink" title="2. 使配置生效"></a>2. 使配置生效</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo sysctl -p</span><br></pre></td></tr></table></figure>
+<h2 id="3-验证"><a href="#3-验证" class="headerlink" title="3. 验证"></a>3. 验证</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 输出 1 表示 IPv6 已禁用</span></span><br><span class="line">cat /proc/sys/net/ipv6/conf/all/disable_ipv6</span><br><span class="line"></span><br><span class="line"><span class="comment"># 网卡信息中不再出现 inet6 地址</span></span><br><span class="line">ifconfig</span><br><span class="line"><span class="comment"># 或</span></span><br><span class="line">ip addr</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -270,14 +275,14 @@
       <strong class="article-nav-caption"><</strong>
       <div class="article-nav-title">
         
-          linux-cmd
+          Linux 常用命令
         
       </div>
     </a>
   
   
-    <a href="/2016/07/06/hexo-deploy/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">hexo-deploy</div>
+    <a href="/2016/07/06/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hello World</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -312,7 +317,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="ubuntu-禁用ipv6" data-title="Ubuntu 14.04 / Debian 7.8 禁止 IPv6 的设置方法" data-url="http://yoursite.com/2016/07/07/ubuntu-禁用ipv6/"></div>
+	<div class="ds-thread" data-thread-key="ubuntu-禁用ipv6" data-title="Ubuntu 14.04 / Debian 7.8 禁用 IPv6 的设置方法" data-url="http://yoursite.com/2016/07/07/ubuntu-禁用ipv6/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">

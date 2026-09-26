@@ -4,20 +4,20 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>linux-cmd | Hexo</title>
+  <title>Linux 常用命令 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="linux cmd 常用命令  释放内存 sudo sh -c &amp;quot;echo 3 &amp;gt; /proc/sys/vm/drop_caches&amp;quot;  查询当前文件夹空间大小 du -hsx * | sort -rh | head -10  内存/磁盘空间不足会导致bash tab无法补全 / pm2无法启动 / docker pull / docker start 无法成功执行 /">
+  <meta name="description" content="日常运维中常用的 Linux 命令速查，涵盖系统资源、文件权限、进程、网络和源码安装等。">
 <meta name="keywords" content="linux,cmd">
 <meta property="og:type" content="article">
-<meta property="og:title" content="linux-cmd">
+<meta property="og:title" content="Linux 常用命令">
 <meta property="og:url" content="http://yoursite.com/2016/07/11/linux-cmd/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="linux cmd 常用命令  释放内存 sudo sh -c &amp;quot;echo 3 &amp;gt; /proc/sys/vm/drop_caches&amp;quot;  查询当前文件夹空间大小 du -hsx * | sort -rh | head -10  内存/磁盘空间不足会导致bash tab无法补全 / pm2无法启动 / docker pull / docker start 无法成功执行 /">
+<meta property="og:description" content="日常运维中常用的 Linux 命令速查，涵盖系统资源、文件权限、进程、网络和源码安装等。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2026-09-23T16:13:03.232Z">
+<meta property="og:updated_time" content="2026-09-26T15:32:25.578Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="linux-cmd">
-<meta name="twitter:description" content="linux cmd 常用命令  释放内存 sudo sh -c &amp;quot;echo 3 &amp;gt; /proc/sys/vm/drop_caches&amp;quot;  查询当前文件夹空间大小 du -hsx * | sort -rh | head -10  内存/磁盘空间不足会导致bash tab无法补全 / pm2无法启动 / docker pull / docker start 无法成功执行 /">
+<meta name="twitter:title" content="Linux 常用命令">
+<meta name="twitter:description" content="日常运维中常用的 Linux 命令速查，涵盖系统资源、文件权限、进程、网络和源码安装等。">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -130,7 +130,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/AI-Agent/" style="font-size: 10px;">AI Agent</a> <a href="/tags/Claude-Code/" style="font-size: 10px;">Claude Code</a> <a href="/tags/Code-Graph/" style="font-size: 10px;">Code Graph</a> <a href="/tags/DrSG/" style="font-size: 10px;">DrSG</a> <a href="/tags/cmd/" style="font-size: 10px;">cmd</a> <a href="/tags/deploy/" style="font-size: 20px;">deploy</a> <a href="/tags/docker/" style="font-size: 10px;">docker</a> <a href="/tags/docker-compose/" style="font-size: 10px;">docker-compose</a> <a href="/tags/git/" style="font-size: 15px;">git</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/iaas/" style="font-size: 10px;">iaas</a> <a href="/tags/ipv6/" style="font-size: 10px;">ipv6</a> <a href="/tags/linode/" style="font-size: 10px;">linode</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/nginx/" style="font-size: 10px;">nginx</a> <a href="/tags/paas/" style="font-size: 10px;">paas</a> <a href="/tags/saas/" style="font-size: 10px;">saas</a> <a href="/tags/tmux/" style="font-size: 10px;">tmux</a> <a href="/tags/ubuntu/" style="font-size: 10px;">ubuntu</a> <a href="/tags/vpn/" style="font-size: 10px;">vpn</a> <a href="/tags/vps/" style="font-size: 10px;">vps</a> <a href="/tags/webpack/" style="font-size: 10px;">webpack</a> <a href="/tags/weichat/" style="font-size: 10px;">weichat</a> <a href="/tags/二进制格式/" style="font-size: 10px;">二进制格式</a> <a href="/tags/入门/" style="font-size: 10px;">入门</a> <a href="/tags/公众号/" style="font-size: 10px;">公众号</a> <a href="/tags/分布式/" style="font-size: 10px;">分布式</a> <a href="/tags/基础/" style="font-size: 10px;">基础</a> <a href="/tags/微信/" style="font-size: 10px;">微信</a> <a href="/tags/文本/" style="font-size: 10px;">文本</a> <a href="/tags/自动化部署/" style="font-size: 10px;">自动化部署</a> <a href="/tags/集群/" style="font-size: 10px;">集群</a>
+						<a href="/tags/AI-Agent/" style="font-size: 10px;">AI Agent</a> <a href="/tags/Claude-Code/" style="font-size: 10px;">Claude Code</a> <a href="/tags/Code-Graph/" style="font-size: 10px;">Code Graph</a> <a href="/tags/DrSG/" style="font-size: 10px;">DrSG</a> <a href="/tags/cmd/" style="font-size: 10px;">cmd</a> <a href="/tags/deploy/" style="font-size: 20px;">deploy</a> <a href="/tags/docker/" style="font-size: 15px;">docker</a> <a href="/tags/docker-compose/" style="font-size: 10px;">docker-compose</a> <a href="/tags/git/" style="font-size: 15px;">git</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/iaas/" style="font-size: 10px;">iaas</a> <a href="/tags/ipv6/" style="font-size: 10px;">ipv6</a> <a href="/tags/licode/" style="font-size: 10px;">licode</a> <a href="/tags/linode/" style="font-size: 10px;">linode</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/nginx/" style="font-size: 10px;">nginx</a> <a href="/tags/paas/" style="font-size: 10px;">paas</a> <a href="/tags/saas/" style="font-size: 10px;">saas</a> <a href="/tags/tmux/" style="font-size: 15px;">tmux</a> <a href="/tags/ubuntu/" style="font-size: 10px;">ubuntu</a> <a href="/tags/vpn/" style="font-size: 10px;">vpn</a> <a href="/tags/vps/" style="font-size: 10px;">vps</a> <a href="/tags/webpack/" style="font-size: 10px;">webpack</a> <a href="/tags/weichat/" style="font-size: 10px;">weichat</a> <a href="/tags/二进制格式/" style="font-size: 10px;">二进制格式</a> <a href="/tags/入门/" style="font-size: 10px;">入门</a> <a href="/tags/公众号/" style="font-size: 10px;">公众号</a> <a href="/tags/分布式/" style="font-size: 10px;">分布式</a> <a href="/tags/基础/" style="font-size: 10px;">基础</a> <a href="/tags/微信/" style="font-size: 10px;">微信</a> <a href="/tags/文本/" style="font-size: 10px;">文本</a> <a href="/tags/权限设计/" style="font-size: 10px;">权限设计</a> <a href="/tags/笔记/" style="font-size: 10px;">笔记</a> <a href="/tags/自动化部署/" style="font-size: 10px;">自动化部署</a> <a href="/tags/集群/" style="font-size: 10px;">集群</a>
 					</div>
 				</section>
 				
@@ -227,7 +227,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      linux-cmd
+      Linux 常用命令
     </h1>
   
 
@@ -240,6 +240,10 @@
 	</div>
 
         
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/Linux/">Linux</a>
+	</div>
+
 
         <div class="clearfix"></div>
       </div>
@@ -247,62 +251,76 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <ul>
-<li>linux cmd 常用命令<blockquote>
-<ul>
-<li>释放内存 <code>sudo sh -c &quot;echo 3 &gt; /proc/sys/vm/drop_caches&quot;</code> </li>
-<li>查询当前文件夹空间大小 <code>du -hsx * | sort -rh | head -10</code> </li>
-<li>内存/磁盘空间不足会导致bash tab无法补全 / pm2无法启动 / docker pull / docker start 无法成功执行 / 程序崩溃退出 等问题 </li>
-<li>查看cpu占用 <code>top</code> </li>
-<li>查看内存占用 <code>free -m</code> </li>
-<li>源码安装的一些注意<blockquote>
-<ul>
-<li>./configure –prefix=/opt/apache是什么意思<blockquote>
-<ul>
-<li>这是按照路径的设置，./configure 会生成 makefile</li>
-<li>等 make 编译源代码生成相应的动态库或者可执行文件</li>
-<li>执行 make install 后，生成的动态库或者可执行文件就会拷贝到/opt/apache里面</li>
-</ul>
-</blockquote>
-</li>
-</ul>
-</blockquote>
-</li>
-</ul>
-</blockquote>
-</li>
-<li><code>chmod -R 754 ./</code> 4-read 2-write 1-ex</li>
-<li><code>ps -ef | grep docker</code> 查看进程</li>
-<li>修改用户密码 <code>passwd username</code> </li>
-<li>scp复制文件 <code>scp /home/daisy/full.tar.gz k@172.19.2.75:/home/k</code> 需要ssh服务 </li>
-<li>ubuntu 安装ssh服务 <blockquote>
-<ul>
-<li><code>sudo apt-get install openssh-server</code> <code>sudo service ssh start</code> </li>
-</ul>
-</blockquote>
-</li>
-<li>退出telnet<blockquote>
+        <p>日常运维中常用的 Linux 命令速查，涵盖系统资源、文件权限、进程、网络和源码安装等。</p>
+<a id="more"></a>
+<h2 id="系统资源"><a href="#系统资源" class="headerlink" title="系统资源"></a>系统资源</h2><table>
+<thead>
+<tr>
+<th>用途</th>
+<th>命令</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>查看 CPU 占用</td>
+<td><code>top</code>（或更直观的 <code>htop</code>）</td>
+</tr>
+<tr>
+<td>查看内存占用</td>
+<td><code>free -m</code></td>
+</tr>
+<tr>
+<td>查看磁盘分区使用情况</td>
+<td><code>df -h</code></td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 当前目录下占用空间最大的 10 项</span></span><br><span class="line">du -hsx * | sort -rh | head -10</span><br><span class="line"></span><br><span class="line"><span class="comment"># 释放页缓存</span></span><br><span class="line">sync &amp;&amp; sudo sh -c <span class="string">"echo 3 &gt; /proc/sys/vm/drop_caches"</span></span><br></pre></td></tr></table></figure>
 <blockquote>
-<ul>
-<li><code>ctrl + c</code> or <code>ctrl + ]</code> 然后 <code>quit</code> </li>
-</ul>
+<p><strong>注意</strong>：内存或磁盘空间不足时，会出现 bash Tab 无法补全、pm2 无法启动、<code>docker pull</code> / <code>docker start</code> 执行失败、程序崩溃退出等各种问题。排查问题时先看一眼 <code>free -m</code> 和 <code>df -h</code>。</p>
 </blockquote>
+<p><code>drop_caches</code> 只会释放干净的缓存，执行前先 <code>sync</code> 把脏页写回磁盘。它通常只用于测试，生产环境一般不需要手动执行。</p>
+<h2 id="文件权限"><a href="#文件权限" class="headerlink" title="文件权限"></a>文件权限</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod -R 754 ./</span><br></pre></td></tr></table></figure>
+<p>权限由三位八进制数组成，依次对应 <strong>所有者 / 所属组 / 其他人</strong>，每一位是以下数值之和：</p>
+<table>
+<thead>
+<tr>
+<th>数值</th>
+<th>权限</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>4</td>
+<td>读（r）</td>
+</tr>
+<tr>
+<td>2</td>
+<td>写（w）</td>
+</tr>
+<tr>
+<td>1</td>
+<td>执行（x）</td>
+</tr>
+</tbody>
+</table>
+<p>所以 <code>754</code> 表示：所有者 <code>rwx</code>，所属组 <code>r-x</code>，其他人 <code>r--</code>。</p>
+<h2 id="用户与进程"><a href="#用户与进程" class="headerlink" title="用户与进程"></a>用户与进程</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 修改用户密码</span></span><br><span class="line">passwd username</span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看进程</span></span><br><span class="line">ps -ef | grep docker</span><br></pre></td></tr></table></figure>
+<h2 id="远程与文件传输"><a href="#远程与文件传输" class="headerlink" title="远程与文件传输"></a>远程与文件传输</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># scp 复制文件到远程主机（远程主机需要运行 ssh 服务）</span></span><br><span class="line">scp ~/full.tar.gz user@192.168.1.100:/home/user</span><br><span class="line"></span><br><span class="line"><span class="comment"># Ubuntu 安装并启动 ssh 服务</span></span><br><span class="line">sudo apt-get install openssh-server</span><br><span class="line">sudo service ssh start</span><br></pre></td></tr></table></figure>
+<h2 id="网络与端口"><a href="#网络与端口" class="headerlink" title="网络与端口"></a>网络与端口</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查看 TCP 端口占用（-p 显示进程信息需要 root 权限）</span></span><br><span class="line">sudo netstat -anp | grep 5672</span><br><span class="line"><span class="comment"># 较新的系统推荐使用 ss</span></span><br><span class="line">sudo ss -tlnp | grep 5672</span><br></pre></td></tr></table></figure>
+<p>测试端口连通性（Ubuntu）：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># TCP</span></span><br><span class="line">telnet <span class="variable">$IP</span> <span class="variable">$PORT</span></span><br><span class="line"><span class="comment"># 或</span></span><br><span class="line">nc -vz <span class="variable">$IP</span> <span class="variable">$PORT</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># UDP</span></span><br><span class="line">nc -vzu <span class="variable">$IP</span> <span class="variable">$PORT</span></span><br></pre></td></tr></table></figure>
+<p><code>nc</code> 参数说明：<code>-u</code> 使用 UDP 协议，<code>-v</code> 详细输出，<code>-z</code> 只检测端口、不发送数据。连通时会输出类似 <code>Connection to $IP $PORT port [udp/ntp] succeeded!</code> 的信息。</p>
+<blockquote>
+<p><strong>注意</strong>：UDP 是无连接协议，<code>nc -vzu</code> 的结果只能作为参考。防火墙静默丢包时同样可能显示成功，最可靠的办法是让服务端实际回包来验证。</p>
 </blockquote>
-</li>
-<li>查看端口 tcp<blockquote>
-<ul>
-<li>netstat -anp | grep 5672</li>
-</ul>
-</blockquote>
-</li>
-<li>测试端口连通性(ubuntu)<blockquote>
-<ul>
-<li>tcp <code>telnet $IP $port</code> </li>
-<li>udp <code>nc -vzu $IP $port</code> -u代表udp协议 ，-v代表详细模式，-z代表只监测端口不发送数据; Connection to $IP $port port [udp/ntp] succeeded! ; 没有回显代表不连通 </li>
-</ul>
-</blockquote>
-</li>
-</ul>
+<p>退出 telnet：先按 <code>Ctrl + ]</code> 进入 telnet 命令模式，再输入 <code>quit</code> 回车。</p>
+<h2 id="源码安装"><a href="#源码安装" class="headerlink" title="源码安装"></a>源码安装</h2><p>以 <code>./configure --prefix=/opt/apache</code> 为例，源码安装一般分三步：</p>
+<ol>
+<li><code>./configure --prefix=/opt/apache</code>：检查编译环境、设置<strong>安装路径</strong>，并生成 <code>Makefile</code>。</li>
+<li><code>make</code>：编译源代码，生成相应的动态库或可执行文件。</li>
+<li><code>make install</code>：把生成的动态库和可执行文件复制到 <code>--prefix</code> 指定的目录（这里是 <code>/opt/apache</code>）。</li>
+</ol>
 
       
     </div>
@@ -323,7 +341,7 @@
   
   
     <a href="/2016/07/07/ubuntu-禁用ipv6/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Ubuntu 14.04 / Debian 7.8 禁止 IPv6 的设置方法</div>
+      <div class="article-nav-title">Ubuntu 14.04 / Debian 7.8 禁用 IPv6 的设置方法</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -358,7 +376,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="linux-cmd" data-title="linux-cmd" data-url="http://yoursite.com/2016/07/11/linux-cmd/"></div>
+	<div class="ds-thread" data-thread-key="linux-cmd" data-title="Linux 常用命令" data-url="http://yoursite.com/2016/07/11/linux-cmd/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
